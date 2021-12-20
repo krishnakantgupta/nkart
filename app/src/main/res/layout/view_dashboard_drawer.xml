@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/headerDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_e"
+            android:paddingStart="@dimen/dimen_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnCross"
+                android:layout_width="@dimen/dimen_48dp"
+                android:layout_height="@dimen/dimen_48dp"
+                android:layout_gravity="right|top"
+                android:onClick="onDrawerCrossClick"
+                android:padding="@dimen/dimen_12dp"
+                android:tint="@color/black_7"
+                app:srcCompat="@drawable/ic_cross" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutNoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_16sp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="@dimen/dimen_120dp"
+                    app:srcCompat="@drawable/info_icon_2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="Login"
+                    android:onClick="loginClick"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimen_20sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutUserDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_16sp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="@dimen/dimen_120dp"
+                    android:layout_gravity="left"
+                    app:srcCompat="@drawable/info_icon_2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="Name"
+                    android:textColor="@color/black_4"
+                    android:textSize="@dimen/dimen_20sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="dummymyaddress@gmail.com"
+                    android:textColor="@color/black_7"
+                    android:textSize="@dimen/dimen_16sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/dimen_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerDrawer">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuCollection"
+                    style="@style/navigation_item"
+                    android:onClick="onNewCollectionClick"
+                    app:icon="@drawable/ic_flag"
+                    app:title="New Collection" />
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuCategory"
+                    style="@style/navigation_item"
+                    android:onClick="onCategoryClick"
+                    app:icon="@drawable/ic_categories"
+                    app:title="Categories" />
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuAccount"
+                    style="@style/navigation_item"
+                    android:onClick="onAccountClick"
+                    app:icon="@drawable/ic_person"
+                    app:title="Account" />
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuOrder"
+                    style="@style/navigation_item"
+                    android:onClick="onOrderClick"
+                    app:icon="@drawable/ic_order_filled"
+                    app:title="View Order" />
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuWishlist"
+                    style="@style/navigation_item"
+                    android:onClick="onWishListClick"
+                    app:icon="@drawable/ic_heart_filled"
+                    app:title="Wishlist" />
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuNotification"
+                    style="@style/navigation_item"
+                    app:icon="@drawable/ic_bell"
+                    app:title="Notification" />
+
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuSettings"
+                    style="@style/navigation_item"
+                    app:icon="@drawable/ic_setting"
+                    app:title="Settings" />
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuHelp"
+                    style="@style/navigation_item"
+                    app:icon="@drawable/ic_help"
+                    app:title="Help" />
+
+                <com.kk.nkart.ui.components.CustomNavigationItem
+                    android:id="@+id/menuLogout"
+                    style="@style/navigation_item"
+                    app:icon="@drawable/ic_logout"
+                    app:isSelected="true"
+                    app:title="Logout" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</ScrollView>

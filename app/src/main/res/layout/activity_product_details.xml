@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_d"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/transparent_toolbar"
+            android:elevation="0dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_pdp_detail_image_height"
+                android:padding="@dimen/dimen_30dp"
+                android:src="@drawable/sofa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.afollestad.viewpagerdots.DotsIndicator
+                android:id="@+id/dotIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:background="#00ff00"
+                app:dot_drawable="@color/colorPrimary"
+                app:dot_drawable_unselected="@color/black_9"
+                app:dot_height="@dimen/dimen_4dp"
+                app:dot_width="@dimen/dimen_4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgProduct"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_top_round"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingBottom="@dimen/dimen_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProduct">
+
+                <TextView
+                    style="@style/text_h5"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@drawable/background_red_round"
+                    android:padding="@dimen/dimen_2dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="71% OFF"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_top_round"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_h1_bold"
+                        android:text="Rs. 12299" />
+
+                    <TextView
+                        style="@style/text_h5_bold"
+                        android:layout_marginStart="@dimen/dimen_16dp"
+                        android:text="Save Rs. 12299"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <com.kk.nkart.ui.common.StrikeTextView
+                    style="@style/text_h5"
+                    android:text="@string/strike_mrp"
+                    android:textColor="@color/black_9"
+                    tools:text="@string/strike_mrp" />
+                <!--                mrpPrice.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);-->
+
+                <TextView
+                    style="@style/text_h5"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:text="category" />
+
+                <TextView
+                    style="@style/text_h3_bold"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:text="Teal Basics by Chumbak Jasper Fabric 6 Seater Sofa" />
+
+                <LinearLayout
+                    android:id="@+id/rattingContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        style="@style/rattingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/colorPrimary"
+                        android:rating="3" />
+
+                    <RatingBar
+                        style="@style/rattingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/colorPrimary"
+                        android:rating="3" />
+
+                    <RatingBar
+                        style="@style/rattingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/colorPrimary"
+                        android:rating="3" />
+
+                    <RatingBar
+                        style="@style/rattingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/colorPrimary"
+                        android:rating="3" />
+
+                    <RatingBar
+                        style="@style/rattingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/colorPrimary"
+                        android:rating="3" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/colorContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:orientation="vertical">
+
+                    <View style="@style/saperator_gray" />
+
+                    <TextView
+                        style="@style/text_h4"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        android:text="Color" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:flexWrap="wrap">
+
+                        <include layout="@layout/view_color" />
+
+                        <include layout="@layout/view_color" />
+
+                        <include layout="@layout/view_color" />
+
+
+                    </com.google.android.flexbox.FlexboxLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sizeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:orientation="vertical">
+
+                    <View style="@style/saperator_gray" />
+
+                    <TextView
+                        style="@style/text_h4"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        android:text="Size" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:flexWrap="wrap">
+
+                        <include layout="@layout/view_size" />
+
+                        <include layout="@layout/view_size" />
+
+                        <include layout="@layout/view_size" />
+
+                        <include layout="@layout/view_size" />
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    style="@style/saperator_gray"
+                    android:layout_marginTop="@dimen/dimen_8dp" />
+
+                <TextView
+                    style="@style/text_h4_bold"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginBottom="@dimen/dimen_4dp"
+                    android:text="Product Description:" />
+
+                <TextView
+                    style="@style/text_h5"
+                    android:text="Do up your space with our comfy 6 seater L shape lounging couch. Available in original Chumbak designs, our couch is handcrafted in Acacia wood. Upholstered in Shaneel with vibrant motifs and prints. Perfect pick to brighten up your living room or any other space in your home." />
+
+                <LinearLayout
+                    style="@style/roundPrimaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_20dp"
+                        android:layout_height="@dimen/dimen_20dp"
+                        android:src="@drawable/ic_cart_filled" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:background="@color/transparent"
+                        android:text="@string/add_to_cart" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wishlist"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                app:cardCornerRadius="@dimen/dimen_20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProduct">
+
+                <ImageView
+                    android:id="@+id/imgWishlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen_8dp"
+                    android:src="@drawable/ic_heart_filled"
+                    app:tint="@color/colorPrimary" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

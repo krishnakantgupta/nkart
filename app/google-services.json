@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "483656082384",
+    "project_id": "nkart-7f485",
+    "storage_bucket": "nkart-7f485.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483656082384:android:f8160d7afa24399fc5cfd5",
+        "android_client_info": {
+          "package_name": "com.kk.nkart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483656082384-mlvftsdvlrblr5no8hj7dmjvck0bbl03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMbipzuzbOqNwq5Gmz7NfEnnKH3XGpUeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483656082384-mlvftsdvlrblr5no8hj7dmjvck0bbl03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

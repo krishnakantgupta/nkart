@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../client/Forcura/code/Forcura-Mobile-Android/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/app/src/main/java/za/co/nedbank/ui/view/home/overview/OverviewFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/app/src/main/java/za/co/nedbank/ui/view/home/overview/OverviewPresenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/app/src/main/java/za/co/nedbank/ui/view/home/overview/OverviewView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/app/src/main/res/layout/fragment_menu_overview.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/app/src/test/java/za/co/nedbank/ui/view/home/overview/OverViewPresenterTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/core/src/main/java/za/co/nedbank/core/utils/FormattingUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/core/src/main/java/za/co/nedbank/core/view/media_content/AppWhatsNewFeatureCardViewHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/code/banking-app-droid/core/src/main/java/za/co/nedbank/core/view/media_content/MediaContentAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/app/src/main/java/za/co/nedbank/uisdk/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/adapter/ImagSetListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/adapter/ImageSetListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/adapter/RecyclerViewItemClickListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/component/offer/OfferAdapterComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/component/offer/OfferComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/component/whatsNew/FeatureCardInfoModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/component/whatsNew/FeatureCardInfoModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/component/whatsNew/WhatsNewComponent.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/component/whatsNew/WhatsNewFeatureCardAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/listener/ImageSetListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/java/za/co/nedbank/uisdk/listener/RecyclerViewItemClickListener.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/res/drawable/background_outline_round_gray.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/res/layout/component_whats_new.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/res/layout/item_feature_card.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/res/values/attrs.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../nagarro/NedBank/project/uiSDK/ui-components-sdk-droid/uisdk/src/main/res/values/colors.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editTextParent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvLable"
+        style="@style/text_h4"
+        android:text="asdasd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:paddingStart="0dp"
+        android:paddingVertical="0dp"
+        android:inputType="text"
+        android:background="@null"
+        android:paddingRight="@dimen/dimen_20dp"
+        android:text=""
+        android:textSize="@dimen/dimen_15sp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textCursorDrawable ="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLable" />
+
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/black_a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText" />
+
+    <TextView
+        android:id="@+id/tvError"
+        style="@style/text_h6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:drawableStart="@drawable/ic_error_edittext"
+        android:drawablePadding="@dimen/dimen_10sp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/red_medium_dark"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomLine" />
+
+</LinearLayout>

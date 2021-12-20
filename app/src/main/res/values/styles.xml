@@ -1,0 +1,128 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorSecondary">@color/black_b</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="text_white_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+    </style>
+
+    <style name="navigation_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="normalColor">@color/black_7</item>
+        <item name="selectedColor">@color/colorPrimary</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/selector_navigation_row_item</item>
+    </style>
+
+    <style name="AppTheme.Contrast.Toolbar" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+
+    <style name="text_h1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black_3</item>
+        <item name="android:textSize">@dimen/dimen_22sp</item>
+    </style>
+
+    <style name="text_h1_bold" parent="text_h1">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_h2" parent="text_h1">
+        <item name="android:textSize">@dimen/dimen_20sp</item>
+    </style>
+
+    <style name="text_h2_bold" parent="text_h2">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_h3" parent="text_h1">
+        <item name="android:textSize">@dimen/dimen_18sp</item>
+    </style>
+
+    <style name="text_h3_bold" parent="text_h3">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_h4" parent="text_h1">
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+    </style>
+
+    <style name="text_h4_bold" parent="text_h4">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_h5" parent="text_h1">
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+    </style>
+
+    <style name="text_h5_bold" parent="text_h5">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_h6" parent="text_h1">
+        <item name="android:textSize">@dimen/dimen_12sp</item>
+    </style>
+
+    <style name="text_h6_bold" parent="text_h6">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_h7" parent="text_h1">
+        <item name="android:textSize">@dimen/dimen_10sp</item>
+    </style>
+
+    <style name="roundPrimaryButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dimen_40dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:background">@drawable/background_round_primary_button</item>
+    </style>
+
+    <style name="rattingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/style_ratting_bar</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">18dip</item>
+        <item name="android:minWidth">16dip</item>
+        <item name="android:maxWidth">18dip</item>
+    </style>
+
+    <style name="saperator_gray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/black_a</item>
+        <item name="android:alpha">0.3</item>
+    </style>
+
+    <style name="customTextBox">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/black_e</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingStart">@dimen/dimen_10dp</item>
+        <item name="android:paddingEnd">@dimen/dimen_10dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+</resources>

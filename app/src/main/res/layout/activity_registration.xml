@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+<!--        <variable-->
+<!--            name="signUpViewModel"-->
+<!--            type="com.kk.nkart.ui.view.authentication.registeration.RegistrationViewModel" />-->
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_cross_ract"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/btnBack"
+            layout="@layout/view_go_back" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_20dp"
+                    app:cardCornerRadius="@dimen/dimen_12dp"
+                    app:cardElevation="@dimen/dimen_8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="@dimen/dimen_10dp"
+                            android:text="@string/sign_up"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_30sp"
+                            android:textStyle="bold" />
+
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:orientation="horizontal">
+                          <com.google.android.material.textfield.TextInputLayout
+                              android:layout_width="match_parent"
+                              android:layout_weight="1"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="@dimen/dimen_8dp"
+                              android:layout_marginBottom="@dimen/dimen_8dp"
+                              app:hintTextColor="@color/colorPrimary">
+
+                              <androidx.appcompat.widget.AppCompatEditText
+                                  android:id="@+id/txtFirstName"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:background="@drawable/textfiled_red"
+                                  android:hint="First name"
+                                  android:inputType="textEmailAddress"
+                                  android:maxLength="40"
+                                  android:singleLine="true"
+                                  android:textSize="@dimen/dimen_14sp" />
+                          </com.google.android.material.textfield.TextInputLayout>
+                          <com.google.android.material.textfield.TextInputLayout
+                              android:layout_width="match_parent"
+                              android:layout_weight="1"
+                              android:layout_marginStart="@dimen/dimen_10dp"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="@dimen/dimen_8dp"
+                              android:layout_marginBottom="@dimen/dimen_8dp"
+                              app:hintTextColor="@color/colorPrimary">
+
+                              <androidx.appcompat.widget.AppCompatEditText
+                                  android:id="@+id/txtFullName"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:background="@drawable/textfiled_red"
+                                  android:hint="Enter Full name"
+                                  android:inputType="textEmailAddress"
+                                  android:maxLength="40"
+                                  android:singleLine="true"
+                                  android:textSize="@dimen/dimen_14sp" />
+                          </com.google.android.material.textfield.TextInputLayout>
+                      </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:layout_marginBottom="@dimen/dimen_8dp"
+                            app:hintTextColor="@color/colorPrimary">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txtEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textfiled_red"
+                                android:hint="Enter email address"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="50"
+                                android:singleLine="true"
+                                android:textSize="@dimen/dimen_14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:layout_marginBottom="@dimen/dimen_8dp"
+                            app:hintTextColor="@color/colorPrimary">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txtMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textfiled_red"
+                                android:hint="Enter 10 digit mobile number"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textSize="@dimen/dimen_14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:layout_marginBottom="@dimen/dimen_8dp"
+                            app:hintTextColor="@color/colorPrimary">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txtPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textfiled_red"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:maxLength="30"
+                                android:singleLine="true"
+                                android:textSize="@dimen/dimen_14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:layout_marginBottom="@dimen/dimen_8dp"
+                            app:hintTextColor="@color/colorPrimary">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txtPasswordConfirm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textfiled_red"
+                                android:hint="Confirm Password"
+                                android:inputType="textPassword"
+                                android:maxLength="30"
+                                android:singleLine="true"
+                                android:textSize="@dimen/dimen_14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <Button
+                            android:id="@+id/btnRegister"
+                            style="@style/roundPrimaryButton"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/dimen_32dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:text="@string/register" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>
