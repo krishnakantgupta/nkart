@@ -1,9 +1,10 @@
 package com.kk.nkart.ui.view.authentication.login
 
+import com.kk.nkart.base.BaseApplication
 import com.kk.nkart.base.core.BaseViewModel
 
 
-class DashboardViewModel : BaseViewModel() {
+class DashboardViewModel() {
 
 //    private var loginRequestModel: LoginRequestModel = LoginRequestModel()
 //    val email = ObservableField<String>("")

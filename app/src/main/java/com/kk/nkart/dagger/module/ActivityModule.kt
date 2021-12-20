@@ -1,6 +1,7 @@
 package com.kk.nkart.dagger.module
 
 import android.app.Activity
+import android.app.Application
 import android.content.SharedPreferences
 import androidx.annotation.NonNull
 import com.kk.nkart.base.AppPreferences
@@ -25,6 +26,7 @@ class ActivityModule(private var activity: Activity) {
     fun providesNavigationRouter(): NavigationRouter {
         return NavigationRouter(activity)
     }
+
 
     @Singleton
     @NonNull

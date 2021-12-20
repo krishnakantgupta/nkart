@@ -7,9 +7,9 @@
 
         <import type="android.view.View" />
 
-<!--        <variable-->
-<!--            name="signUpViewModel"-->
-<!--            type="com.kk.nkart.ui.view.authentication.registeration.RegistrationViewModel" />-->
+                <variable
+                    name="signUpViewModel"
+                    type="com.kk.nkart.ui.view.authentication.registeration.RegistrationViewModel" />
     </data>
 
     <LinearLayout
@@ -20,6 +20,7 @@
 
         <include
             android:id="@+id/btnBack"
+            app:onBackClick="@{signUpViewModel.goBack}"
             layout="@layout/view_go_back" />
 
         <ScrollView
@@ -65,49 +66,49 @@
                             android:textStyle="bold" />
 
 
-                      <LinearLayout
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content" android:orientation="horizontal">
-                          <com.google.android.material.textfield.TextInputLayout
-                              android:layout_width="match_parent"
-                              android:layout_weight="1"
-                              android:layout_height="wrap_content"
-                              android:layout_marginTop="@dimen/dimen_8dp"
-                              android:layout_marginBottom="@dimen/dimen_8dp"
-                              app:hintTextColor="@color/colorPrimary">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:layout_marginBottom="@dimen/dimen_8dp"
+                                app:hintTextColor="@color/colorPrimary">
 
-                              <androidx.appcompat.widget.AppCompatEditText
-                                  android:id="@+id/txtFirstName"
-                                  android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:background="@drawable/textfiled_red"
-                                  android:hint="First name"
-                                  android:inputType="textEmailAddress"
-                                  android:maxLength="40"
-                                  android:singleLine="true"
-                                  android:textSize="@dimen/dimen_14sp" />
-                          </com.google.android.material.textfield.TextInputLayout>
-                          <com.google.android.material.textfield.TextInputLayout
-                              android:layout_width="match_parent"
-                              android:layout_weight="1"
-                              android:layout_marginStart="@dimen/dimen_10dp"
-                              android:layout_height="wrap_content"
-                              android:layout_marginTop="@dimen/dimen_8dp"
-                              android:layout_marginBottom="@dimen/dimen_8dp"
-                              app:hintTextColor="@color/colorPrimary">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/txtFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfiled_red"
+                                    android:hint="First name"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLength="40"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/dimen_14sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginStart="@dimen/dimen_10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:layout_marginBottom="@dimen/dimen_8dp"
+                                app:hintTextColor="@color/colorPrimary">
 
-                              <androidx.appcompat.widget.AppCompatEditText
-                                  android:id="@+id/txtFullName"
-                                  android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:background="@drawable/textfiled_red"
-                                  android:hint="Enter Full name"
-                                  android:inputType="textEmailAddress"
-                                  android:maxLength="40"
-                                  android:singleLine="true"
-                                  android:textSize="@dimen/dimen_14sp" />
-                          </com.google.android.material.textfield.TextInputLayout>
-                      </LinearLayout>
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/txtFullName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfiled_red"
+                                    android:hint="Enter Full name"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLength="40"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/dimen_14sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
 
 
                         <com.google.android.material.textfield.TextInputLayout

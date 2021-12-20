@@ -19,8 +19,8 @@
 
         <include
             android:id="@+id/btnBack"
-            android:onClick="goBackClick"
-            layout="@layout/view_go_back" />
+            layout="@layout/view_go_back"
+            app:onBackClick="@{loginViewModel.goBack}" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -106,8 +106,10 @@
                                     android:background="@drawable/textfiled_red"
                                     android:hint="Enter email address"
                                     android:inputType="textEmailAddress"
-                                    android:maxLength="30"
+                                    android:maxLength="50"
+                                    android:onTextChanged="@{loginViewModel.emailTextChanged}"
                                     android:singleLine="true"
+                                    android:text="@{loginViewModel.emailText}"
                                     android:textSize="@dimen/dimen_14sp" />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,9 +127,11 @@
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/textfiled_red"
                                     android:hint="Enter Password"
-                                    android:inputType="textEmailAddress"
+                                    android:inputType="textPassword"
                                     android:maxLength="30"
+                                    android:onTextChanged="@{loginViewModel.passwordTextChanged}"
                                     android:singleLine="true"
+                                    android:text="@{loginViewModel.passwordText}"
                                     android:textSize="@dimen/dimen_14sp" />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,10 +141,7 @@
                                 style="@style/roundPrimaryButton"
                                 android:layout_width="match_parent"
                                 android:layout_marginTop="@dimen/dimen_32dp"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:onClick="doLoginClick"
-                                android:focusableInTouchMode="true"
+                                android:onClick="@{ () -> loginViewModel.loginClick() }"
                                 android:text="@string/login" />
 
 
@@ -161,8 +162,8 @@
                         style="@style/text_h4_bold"
                         android:clickable="true"
                         android:focusable="true"
+                        android:onClick="@{ () -> loginViewModel.signUpClicked() }"
                         android:text="Sign Up"
-                        android:onClick="signUpClick"
                         android:textColor="@color/colorPrimary"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/tvDontHave"
@@ -172,6 +173,7 @@
                         android:id="@+id/tvForgotPassword"
                         style="@style/text_h4_bold"
                         android:layout_marginTop="@dimen/dimen_20dp"
+                        android:onClick="@{ () -> loginViewModel.forgotPasswordClicked() }"
                         android:text="@string/forgot_password"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

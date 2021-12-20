@@ -1,4 +1,10 @@
 package com.kk.nkart.data.requestModels
 
-data class LoginRequestModel(var email: String? = null,
-                             var password: String? = null) {}
+import com.google.gson.Gson
+
+data class LoginRequestModel(var username: String? = null,
+                             var password: String? = null){
+    fun getJSON():String{
+        return  Gson().toJson(this)
+    }
+}
