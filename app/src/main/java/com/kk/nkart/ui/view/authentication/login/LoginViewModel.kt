@@ -28,8 +28,6 @@ class LoginViewModel @Inject constructor(val application: BaseApplication,privat
     val emailText = MutableLiveData<String>().apply { value = "" }
     val passwordText = MutableLiveData<String>().apply { value = "" }
 
-    private val compositeDisposable = CompositeDisposable()
-
     private fun doLogin(loginRequestModel: LoginRequestModel) {
         Logger.v("--KK-- Login", "Start")
         compositeDisposable.add(
@@ -42,7 +40,7 @@ class LoginViewModel @Inject constructor(val application: BaseApplication,privat
                     Logger.v("--KK-- Login", "Done" + userList)
 //                    loginResponse.postValue(LoadingStatusDetails.success(userList))
                 }, { throwable ->
-                    Logger.v("--KK-- Login", "Done" + throwable.message)
+                    Logger.e("--KK-- Login", "Error" + throwable.message)
 //                    loginResponse.postValue(
 //                        LoadingStatusDetails.error(
 //                            "Error:" + throwable.message,

@@ -18,7 +18,15 @@ class APIConstants {
         const val BASE_URL: String = "https://jsonplaceholder.typicode.com/todos/"
 
         const val GET_ARTICLE: String = "1"
-        const val GET_LOGIN: String = "1"
+        const val GET_LOGIN: String = "/nKart/authenticateUser"
+        const val GET_REGISTRATION: String = "/nKart/registerUser"
+        const val GET_CATEGORY: String = "nKart/getProductCategories"
+        const val GET_PRODUCT_LIST: String = "/nKart/products"
+        const val GET_PRODUCT_DETAILS: String = "/nKart/getAddress"
+        const val GET_ADDRESS: String = "/nKart/getAddress"
+        const val GET_WISHLIST: String = "/nKart/getWishlistProducts"
+        const val GET_CART_LIST: String = "/nKart/getCartlistProducts"
+
     }
 }
 

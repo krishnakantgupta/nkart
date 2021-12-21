@@ -28,4 +28,5 @@
     <color name="red">#FFFF0000</color>
     <color name="red_medium_dark">#FFA80000</color>
     <color name="transparent">#00000000</color>
+    <color name="dialogBackground">#55000000</color>
 </resources>

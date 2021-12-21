@@ -1,0 +1,325 @@
+[
+  {
+    "categoryId": 1,
+    "categoryName": "MOBILES & TABLETS",
+    "subCategories": [
+      {
+        "categoryId": 1,
+        "subCategoryId": 1,
+        "subCategoryName": "Smartphones"
+      },
+      {
+        "categoryId": 1,
+        "subCategoryId": 2,
+        "subCategoryName": "Apple Accessories"
+      },
+      {
+        "categoryId": 1,
+        "subCategoryId": 3,
+        "subCategoryName": "Tablet Accessories"
+      },
+      {
+        "categoryId": 1,
+        "subCategoryId": 4,
+        "subCategoryName": "Headphones & Headsets"
+      },
+      {
+        "categoryId": 1,
+        "subCategoryId": 5,
+        "subCategoryName": "Power Banks"
+      },
+      {
+        "categoryId": 1,
+        "subCategoryId": 6,
+        "subCategoryName": "Smart Wearables"
+      },
+      {
+        "categoryId": 1,
+        "subCategoryId": 7,
+        "subCategoryName": "Docking Stations"
+      }
+    ]
+  },
+  {
+    "categoryId": 2,
+    "categoryName": "TELEVISION & AUDIO",
+    "subCategories": [
+      {
+        "categoryId": 2,
+        "subCategoryId": 8,
+        "subCategoryName": "Smart TVs"
+      },
+      {
+        "categoryId": 2,
+        "subCategoryId": 9,
+        "subCategoryName": "4K Ultra HD TVs"
+      },
+      {
+        "categoryId": 2,
+        "subCategoryId": 10,
+        "subCategoryName": "Streaming Devices"
+      },
+      {
+        "categoryId": 2,
+        "subCategoryId": 11,
+        "subCategoryName": "Gaming Consoles"
+      },
+      {
+        "categoryId": 2,
+        "subCategoryId": 12,
+        "subCategoryName": "Projectors"
+      },
+      {
+        "categoryId": 2,
+        "subCategoryId": 13,
+        "subCategoryName": "Party Speakers"
+      },
+      {
+        "categoryId": 2,
+        "subCategoryId": 14,
+        "subCategoryName": "Musical Keyboards"
+      }
+    ]
+  },
+  {
+    "categoryId": 3,
+    "categoryName": "HOME APPLIANCES",
+    "subCategories": [
+      {
+        "categoryId": 3,
+        "subCategoryId": 15,
+        "subCategoryName": "Air Conditioners"
+      },
+      {
+        "categoryId": 3,
+        "subCategoryId": 16,
+        "subCategoryName": "Air Coolers"
+      },
+      {
+        "categoryId": 3,
+        "subCategoryId": 17,
+        "subCategoryName": "Air Purifiers"
+      },
+      {
+        "categoryId": 3,
+        "subCategoryId": 18,
+        "subCategoryName": "Washing Machines"
+      },
+      {
+        "categoryId": 3,
+        "subCategoryId": 19,
+        "subCategoryName": "Refrigerators"
+      },
+      {
+        "categoryId": 3,
+        "subCategoryId": 20,
+        "subCategoryName": "Vacuum Cleaners"
+      }
+    ]
+  },
+  {
+    "categoryId": 4,
+    "categoryName": "COMPUTERS",
+    "subCategories": [
+      {
+        "categoryId": 4,
+        "subCategoryId": 22,
+        "subCategoryName": "Laptops"
+      },
+      {
+        "categoryId": 4,
+        "subCategoryId": 23,
+        "subCategoryName": "Desktops Computers"
+      },
+      {
+        "categoryId": 4,
+        "subCategoryId": 24,
+        "subCategoryName": "Bluetooth & WiFi Speakers"
+      },
+      {
+        "categoryId": 4,
+        "subCategoryId": 25,
+        "subCategoryName": "Wireless Hotspot"
+      },
+      {
+        "categoryId": 4,
+        "subCategoryId": 26,
+        "subCategoryName": "Data Storage Devices"
+      },
+      {
+        "categoryId": 4,
+        "subCategoryId": 27,
+        "subCategoryName": "Printers"
+      },
+      {
+        "categoryId": 4,
+        "subCategoryId": 28,
+        "subCategoryName": "Mouse & Keyboards"
+      }
+    ]
+  },
+  {
+    "categoryId": 5,
+    "categoryName": "CAMERAS",
+    "subCategories": [
+      {
+        "categoryId": 5,
+        "subCategoryId": 29,
+        "subCategoryName": "DSLR Cameras"
+      },
+      {
+        "categoryId": 5,
+        "subCategoryId": 30,
+        "subCategoryName": "Mirrorless Cameras"
+      },
+      {
+        "categoryId": 5,
+        "subCategoryId": 31,
+        "subCategoryName": "ProSumer Cameras"
+      },
+      {
+        "categoryId": 5,
+        "subCategoryId": 32,
+        "subCategoryName": "Binoculars"
+      },
+      {
+        "categoryId": 5,
+        "subCategoryId": 33,
+        "subCategoryName": "Camera Accessories"
+      },
+      {
+        "categoryId": 5,
+        "subCategoryId": 34,
+        "subCategoryName": "Tripods & Monopods"
+      },
+      {
+        "categoryId": 5,
+        "subCategoryId": 35,
+        "subCategoryName": "Memory Cards"
+      }
+    ]
+  },
+  {
+    "categoryId": 6,
+    "categoryName": "KITCHEN APPLIANCES",
+    "subCategories": [
+      {
+        "categoryId": 6,
+        "subCategoryId": 36,
+        "subCategoryName": "Microwave Ovens"
+      },
+      {
+        "categoryId": 6,
+        "subCategoryId": 37,
+        "subCategoryName": "Water Purifiers"
+      },
+      {
+        "categoryId": 6,
+        "subCategoryId": 38,
+        "subCategoryName": "Juicer Mixer Grinders"
+      },
+      {
+        "categoryId": 6,
+        "subCategoryId": 39,
+        "subCategoryName": "Food Processors"
+      },
+      {
+        "categoryId": 6,
+        "subCategoryId": 40,
+        "subCategoryName": "Kitchen Chimneys"
+      },
+      {
+        "categoryId": 6,
+        "subCategoryId": 41,
+        "subCategoryName": "Sandwich Makers"
+      },
+      {
+        "categoryId": 6,
+        "subCategoryId": 42,
+        "subCategoryName": "Electric Kettles"
+      }
+    ]
+  },
+  {
+    "categoryId": 7,
+    "categoryName": "PERSONAL CARE",
+    "subCategories": [
+      {
+        "categoryId": 7,
+        "subCategoryId": 43,
+        "subCategoryName": "Shavers & Trimmers"
+      },
+      {
+        "categoryId": 7,
+        "subCategoryId": 44,
+        "subCategoryName": "Hair Dryers & Stylers"
+      },
+      {
+        "categoryId": 7,
+        "subCategoryId": 45,
+        "subCategoryName": "Hygiene & Personal Care"
+      },
+      {
+        "categoryId": 7,
+        "subCategoryId": 46,
+        "subCategoryName": "Digital Thermometers"
+      },
+      {
+        "categoryId": 7,
+        "subCategoryId": 47,
+        "subCategoryName": "Epilators"
+      },
+      {
+        "categoryId": 7,
+        "subCategoryId": 48,
+        "subCategoryName": "Massager"
+      },
+      {
+        "categoryId": 7,
+        "subCategoryId": 49,
+        "subCategoryName": "Grooming Collection"
+      }
+    ]
+  },
+  {
+    "categoryId": 8,
+    "categoryName": "ACCESSORIES",
+    "subCategories": [
+      {
+        "categoryId": 8,
+        "subCategoryId": 50,
+        "subCategoryName": "Shavers & Trimmers"
+      },
+      {
+        "categoryId": 8,
+        "subCategoryId": 51,
+        "subCategoryName": "Smart Devices"
+      },
+      {
+        "categoryId": 8,
+        "subCategoryId": 52,
+        "subCategoryName": "Smart Sensors"
+      },
+      {
+        "categoryId": 8,
+        "subCategoryId": 53,
+        "subCategoryName": "Smart Lights"
+      },
+      {
+        "categoryId": 8,
+        "subCategoryId": 54,
+        "subCategoryName": "Audio/Video Accessories"
+      },
+      {
+        "categoryId": 8,
+        "subCategoryId": 55,
+        "subCategoryName": "Cleaners & Protectors"
+      },
+      {
+        "categoryId": 8,
+        "subCategoryId": 56,
+        "subCategoryName": "Chargers & Adapters"
+      }
+    ]
+  }
+]

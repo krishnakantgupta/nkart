@@ -124,5 +124,9 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
 
 </resources>

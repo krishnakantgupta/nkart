@@ -1,7 +1,7 @@
 package com.kk.nkart.ui.view.pdp
 
 import android.os.Bundle
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.databinding.ActivityProductDetailsBinding
 

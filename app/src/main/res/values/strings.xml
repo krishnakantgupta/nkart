@@ -43,5 +43,7 @@
     <string name="add_to_cart">Add to cart</string>
     <string name="strike_mrp">MRP ₹ <del>1299</del></string>
     <string name="strike_text"><del>%1$s</del></string>
+    <string name="all">All</string>
+    <string name="pelase_wait">Please wait...</string>
 
 </resources>

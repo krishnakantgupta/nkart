@@ -3,6 +3,7 @@ package com.kk.nkart.ui.view.authentication.registeration
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.google.gson.Gson
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.jet2articalassignment.data.models.ArticleInfo
 import com.kk.nkart.base.BaseApplication
@@ -10,8 +11,12 @@ import com.kk.nkart.base.core.BaseViewModel
 import com.kk.nkart.base.core.Event
 import com.kk.nkart.data.api.APIRepository
 import com.kk.nkart.data.requestModels.LoginRequestModel
+import com.kk.nkart.data.requestModels.RegisterRequestModel
+import com.kk.nkart.utils.Logger
 import com.kk.nkart.utils.StringUtils
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class RegistrationViewModel @Inject constructor(val application: BaseApplication, private val apiRepository: APIRepository) : BaseViewModel(application) {
@@ -25,8 +30,6 @@ class RegistrationViewModel @Inject constructor(val application: BaseApplication
     val passwordText = MutableLiveData<String>().apply { value = "" }
     val confirmPasswordText = MutableLiveData<String>().apply { value = "" }
 
-
-    private val compositeDisposable = CompositeDisposable()
 
     fun firstNameTextChanged(s: CharSequence, start: kotlin.Int, before: kotlin.Int, count: kotlin.Int) {
         firstNameText.value = s.toString()
@@ -79,7 +82,27 @@ class RegistrationViewModel @Inject constructor(val application: BaseApplication
     }
 
     private fun doRegister() {
-
+        var registerRequestModel = RegisterRequestModel(emailText.value, passwordText.value, salutation = "", firstNameText.value, lastNameText.value, emailText.value, mobileText.value)
+        var bodyRequest = Gson().toJson(registerRequestModel)
+        compositeDisposable.add(
+            apiRepository
+//                .doLogin(loginRequestModel.getJSON())
+                .getArticles()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ userList ->
+                    Logger.v("--KK-- doRegister", "Done" + userList)
+//                    loginResponse.postValue(LoadingStatusDetails.success(userList))
+                }, { throwable ->
+                    Logger.e("--KK-- doRegister", "Error" + throwable.message)
+//                    loginResponse.postValue(
+//                        LoadingStatusDetails.error(
+//                            "Error:" + throwable.message,
+//                            null
+//                        )
+//                    )
+                })
+        )
     }
 
     private fun isEmpty(field: MutableLiveData<String>): Boolean {

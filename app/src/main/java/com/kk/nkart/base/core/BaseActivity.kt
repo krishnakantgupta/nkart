@@ -1,4 +1,4 @@
-package com.kk.nkart.base
+package com.kk.nkart.base.core
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

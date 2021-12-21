@@ -8,4 +8,5 @@ class ApiHelper @Inject constructor(private val apiService: ApiService) {
 
     fun doLogin(bodyData : String) = apiService.doLogin(bodyData)
 
+    fun getCategory() = apiService.getCategory()
 }

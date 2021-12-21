@@ -10,7 +10,7 @@ import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.afollestad.viewpagerdots.DotsIndicator
 import com.kk.nkart.R
 import com.kk.nkart.base.AppPreferences
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.base.Constants
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.databinding.ActivitySplashBinding

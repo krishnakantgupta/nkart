@@ -1,14 +1,12 @@
 package com.kk.nkart.ui.view.authentication.login
 
-import android.content.Context
 import android.os.Bundle
-import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.base.BaseApplication
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.data.api.ApiServiceImpl

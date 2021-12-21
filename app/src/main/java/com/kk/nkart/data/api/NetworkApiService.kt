@@ -1,6 +1,7 @@
 package com.kk.jet2articalassignment.data.api
 
 import com.kk.jet2articalassignment.data.models.ArticleInfo
+import com.kk.nkart.data.models.CategoryModel
 import com.kk.nkart.data.models.UserModel
 import io.reactivex.Observable
 import retrofit2.Call
@@ -17,4 +18,7 @@ interface NetworkApiService {
     @POST(APIConstants.GET_LOGIN)
     fun doLogin(@Body bodyData:String): Observable<UserModel>
 
+
+    @GET(APIConstants.GET_CATEGORY)
+    fun getCategory(): Observable<List<CategoryModel>>
 }

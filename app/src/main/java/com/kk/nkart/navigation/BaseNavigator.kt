@@ -7,7 +7,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.core.BaseActivity
 import io.reactivex.Observable
 import java.io.Serializable
 import java.util.*

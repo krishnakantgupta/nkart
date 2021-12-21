@@ -1,7 +1,7 @@
 package com.kk.nkart.dagger
 
 import android.app.Application
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.component.ActivityComponent
 import com.kk.nkart.dagger.component.AppComponent
 import com.kk.nkart.dagger.component.DaggerAppComponent

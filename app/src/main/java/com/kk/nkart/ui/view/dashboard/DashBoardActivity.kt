@@ -7,14 +7,12 @@ import android.view.Gravity.START
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.kk.nkart.R
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.databinding.ActivityDashBoardBinding
-import com.kk.nkart.databinding.ViewDashboardDrawerBinding
 import com.kk.nkart.navigation.NavigationRouter
 import com.kk.nkart.navigation.NavigationTarget
 import com.kk.nkart.ui.view.CartActivity
@@ -132,8 +130,7 @@ class DashBoardActivity : BaseActivity() {
     }
 
     fun onCategoryClick(view: View) {
-        Toast.makeText(this, "Category Clicked", Toast.LENGTH_SHORT).show()
-        navigationRouter.navigateTo(NavigationTarget.to(NavigationTarget.PDP_SCREEN))
+        navigationRouter.navigateTo(NavigationTarget.to(NavigationTarget.CATEGORY_SCREEN))
     }
 
     fun onNewCollectionClick(view: View) {
