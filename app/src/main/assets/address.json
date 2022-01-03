@@ -1,0 +1,42 @@
+[
+  {
+    "addressId": 1,
+    "userId": 1,
+    "address": "102-B, Sector-38",
+    "city": "Gurgaon",
+    "country": "India",
+    "pinCode": "122003",
+    "state": "Gurgaon",
+    "default": false
+  },
+  {
+    "addressId": 2,
+    "userId": 1,
+    "address": "1435, sector 17C, Sukhrali",
+    "city": "Gurgaon",
+    "country": "India",
+    "pinCode": "122015",
+    "state": "Gurgaon",
+    "default": true
+  },
+  {
+    "addressId": 3,
+    "userId": 1,
+    "address": "1234, bajrang nagar",
+    "city": "Indore",
+    "country": "India",
+    "pinCode": "452010",
+    "state": "Madhya pradesh",
+    "default": false
+  },
+  {
+    "addressId": 4,
+    "userId": 1,
+    "address": "987, Bhawani nagar, Andheri East",
+    "city": "Mumbai",
+    "country": "India",
+    "pinCode": "155203",
+    "state": "Maharastra",
+    "default": false
+  }
+]

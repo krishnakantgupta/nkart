@@ -26,3 +26,8 @@ object CommonUtils {
         return data
     }
 }
+
+val size =
+val buffer =
+
+data = String(buffer)

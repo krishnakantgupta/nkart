@@ -43,7 +43,7 @@ class SubCategoryAdapter(private val context: Context, private val itemClickList
             binding.title.text = categoryModel.subCategoryName
             binding.title.setOnClickListener { v ->
                 var position = v.tag as Int
-                itemClickListener.onItemClick(position)
+                itemClickListener.onItemClick(subCategoryList?.get(position)!!, position)
             }
         }
     }

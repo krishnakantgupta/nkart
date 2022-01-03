@@ -26,6 +26,7 @@ class APIConstants {
         const val GET_ADDRESS: String = "/nKart/getAddress"
         const val GET_WISHLIST: String = "/nKart/getWishlistProducts"
         const val GET_CART_LIST: String = "/nKart/getCartlistProducts"
+        const val GET_DASHBOARD: String = "/nKart/getDashboard"
 
     }
 }

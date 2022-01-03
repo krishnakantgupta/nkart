@@ -1,6 +1,6 @@
 package com.kk.nkart.navigation
 
-import com.kk.nkart.ui.view.CartActivity
+import com.kk.nkart.ui.view.cart.CartActivity
 import com.kk.nkart.ui.view.authentication.login.LoginActivity
 import com.kk.nkart.ui.view.authentication.registeration.RegistrationActivity
 import com.kk.nkart.ui.view.category.CategoryActivity

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.jet2articalassignment.data.models.ArticleInfo
+import com.kk.nkart.base.AppMemory
 import com.kk.nkart.base.BaseApplication
 import com.kk.nkart.base.core.BaseViewModel
 import com.kk.nkart.base.core.Event
@@ -37,8 +38,9 @@ class LoginViewModel @Inject constructor(val application: BaseApplication,privat
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ userList ->
+//                    AppMemory.userModel = userList
                     Logger.v("--KK-- Login", "Done" + userList)
-//                    loginResponse.postValue(LoadingStatusDetails.success(userList))
+                    loginResponse.postValue(Event(userList))
                 }, { throwable ->
                     Logger.e("--KK-- Login", "Error" + throwable.message)
 //                    loginResponse.postValue(
@@ -65,6 +67,7 @@ class LoginViewModel @Inject constructor(val application: BaseApplication,privat
             var requestModel =  LoginRequestModel(emailText.value, passwordText.value)
             doLogin(requestModel)
         }else{
+            //Show error
         }
     }
 

@@ -56,7 +56,7 @@ class CategoryAdapter(private val context: Context, private val itemClickListene
                 notifyItemChanged(selectedIndex)
                 notifyItemChanged(position)
                 selectedIndex = position
-                itemClickListener.onItemClick(position)
+                itemClickListener.onItemClick(categoryList?.get(position)!!, position)
             }
         }
     }

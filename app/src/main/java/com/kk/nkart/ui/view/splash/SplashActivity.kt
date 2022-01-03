@@ -41,12 +41,6 @@ class SplashActivity : BaseActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-//        val binding: ActivitySplashBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
-//        val authViewModel = AuthViewModel() //ViewModelProviders.of(this).get(AuthViewModel.class);
-//
-//        binding.setViewModel(authViewModel)
-//        binding.executePendingBindings()
-//        authViewModel.setActivity(this)
         Handler().postDelayed({
             if (appPreferences.isFreshInstall()) {
                 binding.viewPager.visibility = View.VISIBLE

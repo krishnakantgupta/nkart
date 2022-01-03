@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
+import com.kk.nkart.base.AppPreferences
 import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.base.BaseApplication
 import com.kk.nkart.dagger.CoreDI
@@ -20,6 +21,9 @@ class LoginActivity : BaseActivity() {
 
     @Inject
     lateinit var navigationRouter: NavigationRouter
+
+    @Inject
+    lateinit var appPreferences: AppPreferences
 
 //    @Inject
     internal lateinit var LoginViewModelFactory: LoginViewModel.Factory
@@ -56,6 +60,8 @@ class LoginActivity : BaseActivity() {
         loginViewModel.loginResponse.observe(this, Observer { event ->
             event?.getContentIfNotHandled()?.let {
                 var response = it
+                appPreferences.setUserLogin(true)
+                finish()
             }
         })
         loginViewModel.progressEvent.observe(this, Observer { event ->

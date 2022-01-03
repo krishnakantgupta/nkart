@@ -9,4 +9,12 @@ class ApiHelper @Inject constructor(private val apiService: ApiService) {
     fun doLogin(bodyData : String) = apiService.doLogin(bodyData)
 
     fun getCategory() = apiService.getCategory()
+
+    fun getProductList(pageNumber : Int) = apiService.getProductList(pageNumber)
+
+    fun getAddressList(userID: Int) =  apiService.getAddressList(userID)
+
+    fun getProductDetails(productId: Int) =  apiService.getProductDetails(productId)
+
+    fun getDashboardData(userID: Int) =  apiService.getDashboardData(userID)
 }

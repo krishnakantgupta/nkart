@@ -1,0 +1,75 @@
+{
+  "productId": 1,
+  "title": "Oppo A53s",
+  "description": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
+  "quantity": 5,
+  "imageId": 1,
+  "price": 15000,
+  "discount": 20,
+  "selectedProductSize": null,
+  "selectedProductColour": null,
+  "productSize": [
+    {
+      "sizeId": 1,
+      "sizeValue": "38",
+      "sizeName": "Small"
+    },
+    {
+      "sizeId": 2,
+      "sizeValue": "40",
+      "sizeName": "Medium"
+    },
+    {
+      "sizeId": 3,
+      "sizeValue": "42",
+      "sizeName": "Large"
+    },
+    {
+      "sizeId": 4,
+      "sizeValue": "44",
+      "sizeName": "Xl"
+    },
+    {
+      "sizeId": 5,
+      "sizeValue": "46",
+      "sizeName": "XXl"
+    },
+    {
+      "sizeId": 6,
+      "sizeValue": "48",
+      "sizeName": "XXXl"
+    }
+  ],
+  "productColour": [
+    {
+      "colourId": 1,
+      "colourName": "Blue",
+      "colourCode": "#0000FF"
+    },
+    {
+      "colourId": 2,
+      "colourName": "Green",
+      "colourCode": "#008000"
+    },
+    {
+      "colourId": 3,
+      "colourName": "Yellow",
+      "colourCode": "#FFFF00"
+    },
+    {
+      "colourId": 4,
+      "colourName": "Red",
+      "colourCode": "#FF0000"
+    },
+    {
+      "colourId": 5,
+      "colourName": "Black",
+      "colourCode": "#000000"
+    },
+    {
+      "colourId": 6,
+      "colourName": "White",
+      "colourCode": "#FFFFFF"
+    }
+  ]
+}

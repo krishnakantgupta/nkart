@@ -15,7 +15,6 @@ import com.kk.nkart.data.requestModels.RegisterRequestModel
 import com.kk.nkart.utils.Logger
 import com.kk.nkart.utils.StringUtils
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
@@ -27,8 +26,8 @@ class RegistrationViewModel @Inject constructor(val application: BaseApplication
     val lastNameText = MutableLiveData<String>().apply { value = "" }
     val emailText = MutableLiveData<String>().apply { value = "" }
     val mobileText = MutableLiveData<String>().apply { value = "" }
-    val passwordText = MutableLiveData<String>().apply { value = "" }
-    val confirmPasswordText = MutableLiveData<String>().apply { value = "" }
+    val passwordText = MutableLiveData<String>().apply { value = "12345678" }
+    val confirmPasswordText = MutableLiveData<String>().apply { value = "12345678" }
 
 
     fun firstNameTextChanged(s: CharSequence, start: kotlin.Int, before: kotlin.Int, count: kotlin.Int) {
@@ -91,8 +90,9 @@ class RegistrationViewModel @Inject constructor(val application: BaseApplication
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ userList ->
+//                    AppMemory.userModel = userList
                     Logger.v("--KK-- doRegister", "Done" + userList)
-//                    loginResponse.postValue(LoadingStatusDetails.success(userList))
+                    registerResponse.postValue(Event(userList))
                 }, { throwable ->
                     Logger.e("--KK-- doRegister", "Error" + throwable.message)
 //                    loginResponse.postValue(

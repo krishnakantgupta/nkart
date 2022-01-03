@@ -20,11 +20,11 @@ class AppPreferences @Inject constructor(private val pref: SharedPreferences) {
         pref.edit().apply { putBoolean(Companion.KEY_FRESH_INSTALL, false) }.apply()
     }
 
-    fun isLogin(): Boolean {
+    fun isUserLogin(): Boolean {
         return pref.getBoolean(Companion.KEY_IS_LOGIN, false)
     }
 
-    fun setIsLogin(isLogin: Boolean) {
+    fun setUserLogin(isLogin: Boolean) {
         pref.edit().apply { putBoolean(Companion.KEY_IS_LOGIN, isLogin) }.apply()
     }
 

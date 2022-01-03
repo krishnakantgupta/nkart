@@ -47,7 +47,7 @@ abstract class ProductItemGridAdapter(private val context: Context) :
         holder.view.tag = position
         holder.view.setOnClickListener { v ->
             var index = v.tag as Int
-            this.onItemClick(index)
+            this.onItemClick(null, index)
         }
 //        holder.tvDiscount.paintFlags = (holder.tvDiscount.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG)
     }

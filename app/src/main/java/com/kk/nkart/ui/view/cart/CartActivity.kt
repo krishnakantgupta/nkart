@@ -1,4 +1,4 @@
-package com.kk.nkart.ui.view
+package com.kk.nkart.ui.view.cart
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

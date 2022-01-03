@@ -8,7 +8,14 @@
         app:showAsAction="always"
         android:title="@string/cart" />
 
-<!--    <item-->
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
+        android:title="@string/cart" />
+
+
+    <!--    <item-->
 <!--        android:id="@+id/menu_search"-->
 <!--        android:icon="@drawable/ic_search"-->
 <!--        app:showAsAction="always"-->

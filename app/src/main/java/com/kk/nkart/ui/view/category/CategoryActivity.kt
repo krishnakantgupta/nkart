@@ -7,14 +7,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
-import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.base.BaseApplication
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.data.api.ApiServiceImpl
 import com.kk.nkart.data.models.CategoryModel
 import com.kk.nkart.data.models.SubCategoryModel
 import com.kk.nkart.databinding.ActivityCategoryBinding
 import com.kk.nkart.navigation.NavigationRouter
+import com.kk.nkart.navigation.NavigationTarget
 import com.kk.nkart.ui.common.IRecyclerItemClickListener
 import com.kk.nkart.ui.common.ProgressDialog
 import com.kk.nkart.ui.view.adapter.CategoryAdapter
@@ -82,7 +83,7 @@ class CategoryActivity : BaseActivity() {
 
     private fun init() {
         categoryAdapter = CategoryAdapter(this@CategoryActivity, object : IRecyclerItemClickListener {
-            override fun onItemClick(position: Int) {
+            override fun onItemClick(data: Any?, position: Int) {
                 if (position == 0) {
                     subCategoryAdapter.setData(getAllSubCategory())
                 } else {
@@ -91,8 +92,8 @@ class CategoryActivity : BaseActivity() {
             }
         })
         subCategoryAdapter = SubCategoryAdapter(this@CategoryActivity, object : IRecyclerItemClickListener {
-            override fun onItemClick(position: Int) {
-
+            override fun onItemClick(data: Any?, position: Int) {
+                navigationRouter.navigateTo(NavigationTarget.to(NavigationTarget.PLP_SCREEN))
             }
         })
         binding.recyclerViewCategory.adapter = categoryAdapter

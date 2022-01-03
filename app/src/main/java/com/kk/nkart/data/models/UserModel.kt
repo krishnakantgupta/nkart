@@ -1,6 +1,6 @@
 package com.kk.nkart.data.models
 
-data class UserModel(var id: String? = null,
+data class UserModel(var id: Int = -1,
                      var createdAt: String? = null,
                      var name: String? = null,
                      var lastname: String? = null,
