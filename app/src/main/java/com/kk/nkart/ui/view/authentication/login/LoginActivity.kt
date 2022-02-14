@@ -1,14 +1,16 @@
 package com.kk.nkart.ui.view.authentication.login
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
+import com.kk.nkart.base.AppMemory
 import com.kk.nkart.base.AppPreferences
-import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.base.BaseApplication
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.data.api.ApiServiceImpl
 import com.kk.nkart.databinding.ActivityLoginBinding
@@ -25,7 +27,7 @@ class LoginActivity : BaseActivity() {
     @Inject
     lateinit var appPreferences: AppPreferences
 
-//    @Inject
+    //    @Inject
     internal lateinit var LoginViewModelFactory: LoginViewModel.Factory
 
 
@@ -42,7 +44,7 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun setUpViewModel() {
-        LoginViewModelFactory = LoginViewModel.Factory(this.application as BaseApplication, ApiHelper(ApiServiceImpl()))
+        LoginViewModelFactory = LoginViewModel.Factory(appPreferences, this.application as BaseApplication, ApiHelper(ApiServiceImpl()))
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory).get(LoginViewModel::class.java)
         registerGoBack(loginViewModel)
     }
@@ -59,9 +61,15 @@ class LoginActivity : BaseActivity() {
         })
         loginViewModel.loginResponse.observe(this, Observer { event ->
             event?.getContentIfNotHandled()?.let {
-                var response = it
-                appPreferences.setUserLogin(true)
-                finish()
+                if (it != null) {
+                    var response = it
+                    AppMemory.userModel = it
+                    appPreferences.setUserLogin(true)
+                    setResult(RESULT_OK)
+                    finish()
+                } else {
+                    showToast(getString(R.string.invalid_email_or_password))
+                }
             }
         })
         loginViewModel.progressEvent.observe(this, Observer { event ->
@@ -73,17 +81,16 @@ class LoginActivity : BaseActivity() {
                 }
             }
         })
-        loginViewModel.loginResponse.observe(this, Observer { event ->
-            event?.getContentIfNotHandled()?.let {
-                var response = it
-            }
-        })
         loginViewModel.navigationToEvent.observe(this, Observer { event ->
             event?.getContentIfNotHandled()?.let {
                 var screenName = it
                 navigationRouter.navigateTo(NavigationTarget.to(screenName))
             }
         })
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
 

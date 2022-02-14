@@ -1,42 +1,41 @@
 {
-  "topImages":[
+  "topImages": [
     {
-      "url":"https://media.istockphoto.com/vectors/web-banner-or-horizontal-template-design-with-special-offer-on-mobile-vector-id1194426021?k=20&m=1194426021&s=170667a&w=0&h=oqoKnGQuMehJVUDapL3aHZ36AFDgzM16hI96WpaiSYM=",
-      "isProductListing":false,
-      "productId":5,
-      "subCategoryId":1
+      "url": "https://images-eu.ssl-images-amazon.com/images/I/41kZhC-EkeL._SX300_SY300_QL70_FMwebp_.jpg",
+      "isProductListing": true,
+      "productId": 1,
+      "subCategoryId": 1
     },
     {
-      "url":"https://i.pinimg.com/originals/ff/5a/5c/ff5a5cae792cec9de6f7fc65b5dc7aba.jpg",
-      "isProductListing":true,
-      "productId":2,
-      "subCategoryId":1
+      "url": "https://images-eu.ssl-images-amazon.com/images/I/41gamtY4GLS._SX300_SY300_QL70_FMwebp_.jpg",
+      "isProductListing": true,
+      "productId": 2,
+      "subCategoryId": 2
     },
     {
-      "url":"https://www.shopickr.com/wp-content/uploads/2016/06/amazon-india-dslr-camera-best-discounts-offers-coupons.jpg",
-      "isProductListing":true,
-      "productId":2,
-      "subCategoryId":1
+      "url": "https://m.media-amazon.com/images/I/61gRGQe8jjL._AC_UY327_FMwebp_QL65_.jpg",
+      "isProductListing": true,
+      "productId": 3,
+      "subCategoryId": 3
     },
     {
-      "url":"https://1.bp.blogspot.com/-AEqH0iEMaug/Vh1RUlH1SSI/AAAAAAAAXzU/9bBzDeiRRDE/s1600/20151013_225433_730x300_home-appliances.jpg",
-      "isProductListing":true,
-      "productId":2,
-      "subCategoryId":22
+      "url": "https://images-eu.ssl-images-amazon.com/images/I/31GEfQ0aszL._SY445_SX342_QL70_FMwebp_.jpg",
+      "isProductListing": true,
+      "productId": 4,
+      "subCategoryId": 4
     },
     {
-      "url":"https://malabaroffers.com/wp-content/uploads/2021/07/hp-offer.jpg",
-      "isProductListing":true,
-      "productId":2,
-      "subCategoryId":22
+      "url": "https://m.media-amazon.com/images/I/71b5BwTCcZL._AC_UY327_FMwebp_QL65_.jpg",
+      "isProductListing": true,
+      "productId": 5,
+      "subCategoryId": 5
     }
   ],
-
   "newCollection": [
     {
-      "productId": 1,
-      "title": "Oppo A53s",
-      "shortDesc": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
+      "productId": 5,
+      "title": "Samsung Galaxy S10",
+      "shortDesc": "Samsung Galaxy S10 Smart Phone 512 GB, 8 GB RAM, Prism White",
       "categoryId": 1,
       "subCategoryId": 1,
       "quantity": 10,
@@ -44,33 +43,7 @@
       "discount": 20,
       "createdDate": "2021-11-11",
       "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 2,
-      "title": "Samsung Galaxy A22",
-      "shortDesc": "Samsung Galaxy A22 128 GB, 6 GB, Black, Smarphone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 3,
-      "title": "Vivo V21",
-      "shortDesc": "Vivo V21 5G 128 GB, 8 GB RAM, Dusk Blue, Smartphone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/71b5BwTCcZL._AC_UY327_FMwebp_QL65_.jpg"
     },
     {
       "productId": 4,
@@ -83,12 +56,12 @@
       "discount": 20,
       "createdDate": "2021-11-11",
       "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/31GEfQ0aszL._SY445_SX342_QL70_FMwebp_.jpg"
     },
     {
-      "productId": 5,
-      "title": "Samsung Galaxy S10",
-      "shortDesc": "Samsung Galaxy S10 Smart Phone 512 GB, 8 GB RAM, Prism White",
+      "productId": 3,
+      "title": "Vivo V21",
+      "shortDesc": "Vivo V21 5G 128 GB, 8 GB RAM, Dusk Blue, Smartphone",
       "categoryId": 1,
       "subCategoryId": 1,
       "quantity": 10,
@@ -96,50 +69,37 @@
       "discount": 20,
       "createdDate": "2021-11-11",
       "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/61gRGQe8jjL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+      "productId": 1,
+      "title": "Oppo A53s",
+      "shortDesc": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
+      "categoryId": 1,
+      "subCategoryId": 1,
+      "quantity": 10,
+      "price": 25000,
+      "discount": 20,
+      "createdDate": "2021-11-11",
+      "lastUpdated": "2021-11-11",
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/41kZhC-EkeL._SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+      "productId": 2,
+      "title": "Samsung Galaxy A22",
+      "shortDesc": "Samsung Galaxy A22 128 GB, 6 GB, Black, Smarphone",
+      "categoryId": 1,
+      "subCategoryId": 1,
+      "quantity": 10,
+      "price": 25000,
+      "discount": 20,
+      "createdDate": "2021-11-11",
+      "lastUpdated": "2021-11-11",
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/41gamtY4GLS._SX300_SY300_QL70_FMwebp_.jpg"
     }
   ],
   "bestSelling": [
     {
-      "productId": 1,
-      "title": "Oppo A53s",
-      "shortDesc": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 2,
-      "title": "Samsung Galaxy A22",
-      "shortDesc": "Samsung Galaxy A22 128 GB, 6 GB, Black, Smarphone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 3,
-      "title": "Vivo V21",
-      "shortDesc": "Vivo V21 5G 128 GB, 8 GB RAM, Dusk Blue, Smartphone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
       "productId": 4,
       "title": "Apple iPhone 13 Mini",
       "shortDesc": "Apple iPhone 13 Mini 128 GB, Midnight (Black)",
@@ -150,7 +110,20 @@
       "discount": 20,
       "createdDate": "2021-11-11",
       "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/31GEfQ0aszL._SY445_SX342_QL70_FMwebp_.jpg"
+    },
+    {
+      "productId": 1,
+      "title": "Oppo A53s",
+      "shortDesc": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
+      "categoryId": 1,
+      "subCategoryId": 1,
+      "quantity": 10,
+      "price": 25000,
+      "discount": 20,
+      "createdDate": "2021-11-11",
+      "lastUpdated": "2021-11-11",
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/41kZhC-EkeL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
       "productId": 5,
@@ -163,81 +136,15 @@
       "discount": 20,
       "createdDate": "2021-11-11",
       "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/71b5BwTCcZL._AC_UY327_FMwebp_QL65_.jpg"
     }
   ],
-  "recentView": [
-    {
-      "productId": 1,
-      "title": "Oppo A53s",
-      "shortDesc": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 2,
-      "title": "Samsung Galaxy A22",
-      "shortDesc": "Samsung Galaxy A22 128 GB, 6 GB, Black, Smarphone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 3,
-      "title": "Vivo V21",
-      "shortDesc": "Vivo V21 5G 128 GB, 8 GB RAM, Dusk Blue, Smartphone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 4,
-      "title": "Apple iPhone 13 Mini",
-      "shortDesc": "Apple iPhone 13 Mini 128 GB, Midnight (Black)",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 5,
-      "title": "Samsung Galaxy S10",
-      "shortDesc": "Samsung Galaxy S10 Smart Phone 512 GB, 8 GB RAM, Prism White",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    }
-  ],
+  "recentView": null,
   "dealOfTheDay": [
     {
-      "productId": 1,
-      "title": "Oppo A53s",
-      "shortDesc": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
+      "productId": 4,
+      "title": "Apple iPhone 13 Mini",
+      "shortDesc": "Apple iPhone 13 Mini 128 GB, Midnight (Black)",
       "categoryId": 1,
       "subCategoryId": 1,
       "quantity": 10,
@@ -245,7 +152,7 @@
       "discount": 20,
       "createdDate": "2021-11-11",
       "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/31GEfQ0aszL._SY445_SX342_QL70_FMwebp_.jpg"
     },
     {
       "productId": 2,
@@ -258,46 +165,7 @@
       "discount": 20,
       "createdDate": "2021-11-11",
       "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 3,
-      "title": "Vivo V21",
-      "shortDesc": "Vivo V21 5G 128 GB, 8 GB RAM, Dusk Blue, Smartphone",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 4,
-      "title": "Apple iPhone 13 Mini",
-      "shortDesc": "Apple iPhone 13 Mini 128 GB, Midnight (Black)",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
-    },
-    {
-      "productId": 5,
-      "title": "Samsung Galaxy S10",
-      "shortDesc": "Samsung Galaxy S10 Smart Phone 512 GB, 8 GB RAM, Prism White",
-      "categoryId": 1,
-      "subCategoryId": 1,
-      "quantity": 10,
-      "price": 25000,
-      "discount": 20,
-      "createdDate": "2021-11-11",
-      "lastUpdated": "2021-11-11",
-      "thumbnailUrl": "Not Available"
+      "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/41gamtY4GLS._SX300_SY300_QL70_FMwebp_.jpg"
     }
   ]
 }

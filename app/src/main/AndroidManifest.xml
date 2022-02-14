@@ -42,8 +42,17 @@
         <activity
             android:name=".ui.view.pdp.ProductDetailsActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.view.wishlist.WishListActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.view.dashboard.DashBoardActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.view.address.AddressListingActivity"
             android:screenOrientation="portrait" />
 
     </application>

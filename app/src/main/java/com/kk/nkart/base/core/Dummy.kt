@@ -41,4 +41,33 @@ object Dummy {
         var dashboardData = Gson().fromJson(json, DashboardModel::class.java)
         return dashboardData
     }
+
+    fun getLoginJSON(): UserModel {
+        var inputStream = BaseApplication.appContext.assets.open("login.json")
+        var json = CommonUtils.streamToString(inputStream)
+        var userModel = Gson().fromJson(json, UserModel::class.java)
+        return userModel
+    }
+
+    fun getCartJSON(): List<CartModel> {
+        var inputStream = BaseApplication.appContext.assets.open("cart.json")
+        var json = CommonUtils.streamToString(inputStream)
+        var cartModelList = Gson().fromJson<List<CartModel>>(json, object : TypeToken<List<CartModel>>() {}.type)
+        return cartModelList
+    }
+
+
+    fun getWishListJSON(): List<WishListModel> {
+        var inputStream = BaseApplication.appContext.assets.open("wishlist.json")
+        var json = CommonUtils.streamToString(inputStream)
+        var wishList = Gson().fromJson<List<WishListModel>>(json, object : TypeToken<List<WishListModel>>() {}.type)
+        return wishList
+    }
+
+    fun getRegistrationJSON(): UserModel {
+        var inputStream = BaseApplication.appContext.assets.open("login.json")
+        var json = CommonUtils.streamToString(inputStream)
+        var userModel = Gson().fromJson(json, UserModel::class.java)
+        return userModel
+    }
 }

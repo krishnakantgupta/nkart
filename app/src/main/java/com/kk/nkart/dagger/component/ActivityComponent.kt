@@ -3,13 +3,16 @@ package com.kk.nkart.dagger.component
 import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.module.ActivityModule
 import com.kk.nkart.dagger.scopes.ActivityScope
+import com.kk.nkart.ui.view.address.AddressListingActivity
 import com.kk.nkart.ui.view.authentication.login.LoginActivity
 import com.kk.nkart.ui.view.authentication.registeration.RegistrationActivity
+import com.kk.nkart.ui.view.cart.CartActivity
 import com.kk.nkart.ui.view.category.CategoryActivity
 import com.kk.nkart.ui.view.dashboard.DashBoardActivity
 import com.kk.nkart.ui.view.pdp.ProductDetailsActivity
 import com.kk.nkart.ui.view.plp.ProductListActivity
 import com.kk.nkart.ui.view.splash.SplashActivity
+import com.kk.nkart.ui.view.wishlist.WishListActivity
 import dagger.Subcomponent
 
 @ActivityScope
@@ -24,6 +27,9 @@ interface ActivityComponent {
     fun inject(activity: CategoryActivity)
     fun inject(activity: ProductListActivity)
     fun inject(activity: ProductDetailsActivity)
+    fun inject(activity: CartActivity)
+    fun inject(activity: AddressListingActivity)
+    fun inject(activity: WishListActivity)
 
 //    @Component.Factory
 //    interface Factory {

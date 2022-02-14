@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
 import com.kk.nkart.base.BaseApplication
+import com.kk.nkart.base.Constants
 import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.data.api.ApiServiceImpl
@@ -17,7 +18,6 @@ import com.kk.nkart.databinding.ActivityCategoryBinding
 import com.kk.nkart.navigation.NavigationRouter
 import com.kk.nkart.navigation.NavigationTarget
 import com.kk.nkart.ui.common.IRecyclerItemClickListener
-import com.kk.nkart.ui.common.ProgressDialog
 import com.kk.nkart.ui.view.adapter.CategoryAdapter
 import com.kk.nkart.ui.view.adapter.SubCategoryAdapter
 import javax.inject.Inject
@@ -33,7 +33,6 @@ class CategoryActivity : BaseActivity() {
     private lateinit var binding: ActivityCategoryBinding
     private lateinit var viewModel: CategoryViewModel
 
-    private val progressDialog = ProgressDialog()
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var subCategoryAdapter: SubCategoryAdapter
 
@@ -93,7 +92,13 @@ class CategoryActivity : BaseActivity() {
         })
         subCategoryAdapter = SubCategoryAdapter(this@CategoryActivity, object : IRecyclerItemClickListener {
             override fun onItemClick(data: Any?, position: Int) {
-                navigationRouter.navigateTo(NavigationTarget.to(NavigationTarget.PLP_SCREEN))
+                var subCategory = data as SubCategoryModel
+                var navigationTarget = NavigationTarget.to(NavigationTarget.PLP_SCREEN)
+                navigationTarget.withParam(Constants.BUNDLE_KEY_SUB_CATEGORY_ID, subCategory.subCategoryId)
+                navigationTarget.withParam(Constants.BUNDLE_KEY_CATEGORY_ID, subCategory.categoryId)
+                navigationTarget.withParam(Constants.BUNDLE_KEY_SUB_CATEGORY_NAME, subCategory.subCategoryName?:"Listing")
+
+                navigationRouter.navigateTo(navigationTarget)
             }
         })
         binding.recyclerViewCategory.adapter = categoryAdapter

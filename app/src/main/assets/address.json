@@ -7,7 +7,10 @@
     "country": "India",
     "pinCode": "122003",
     "state": "Gurgaon",
-    "default": false
+    "default": false,
+    "deleted": false,
+    "name": "Amit Yadav",
+    "mobile": "9909909901"
   },
   {
     "addressId": 2,
@@ -17,7 +20,10 @@
     "country": "India",
     "pinCode": "122015",
     "state": "Gurgaon",
-    "default": true
+    "default": true,
+    "deleted": false,
+    "name": "Ashok Sawant",
+    "mobile": "2222333344"
   },
   {
     "addressId": 3,
@@ -27,7 +33,10 @@
     "country": "India",
     "pinCode": "452010",
     "state": "Madhya pradesh",
-    "default": false
+    "default": false,
+    "deleted": false,
+    "name": "krishnakant gupta",
+    "mobile": "1112223330"
   },
   {
     "addressId": 4,
@@ -37,6 +46,9 @@
     "country": "India",
     "pinCode": "155203",
     "state": "Maharastra",
-    "default": false
+    "default": false,
+    "deleted": false,
+    "name": "Faruk khan ",
+    "mobile": "1234567890"
   }
 ]

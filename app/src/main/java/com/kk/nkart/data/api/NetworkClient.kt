@@ -30,7 +30,6 @@ object NetworkClient {
             val interceptor = HttpLoggingInterceptor()
             interceptor.level = HttpLoggingInterceptor.Level.BODY
 
-
             val client = OkHttpClient.Builder()
                 .connectTimeout(NETWORK_TIMEOUT, TimeUnit.SECONDS)
                 .readTimeout(READ_TIMEOUT, TimeUnit.MINUTES)

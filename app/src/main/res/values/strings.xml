@@ -57,5 +57,21 @@
     <string name="shipping_to">Shipping to</string>
     <string name="add_new">Add new</string>
     <string name="set_default">Set default</string>
+    <string name="checkout" >Checkout</string>
+    <string name="continue_shopping">Continue shopping</string>
+    <string name="error_firstname">Please enter first name</string>
+    <string name="error_lastname">Please enter last name</string>
+    <string name="error_email_empty">Please enter email address</string>
+    <string name="error_email_invalid">Please enter valid email address</string>
+    <string name="error_mobile_empty">Please enter mobile number</string>
+    <string name="error_password_empty">Please enter passrod</string>
+    <string name="error_confirm_password_empty">Please enter confirm password</string>
+    <string name="error_password_not_match">Password and Confirma password not match</string>
+    <string name="error_password_length">Password must be greater than 6 character</string>
+    <string name="something_went_wrong">Something went wrong. Please try again.</string>
+    <string name="invalid_email_or_password">Invalid email or password.</string>
+    <string name="empty_cart">Your shopping bag is empty.</string>
+    <string name="empty_wishlist">Your Wishlist is empty.</string>
+    <string name="click_on_continue_shopping">Click on continue shopping and add item into cart</string>
 
 </resources>

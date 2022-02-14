@@ -5,9 +5,6 @@ package com.kk.nkart.utils
 
 import android.util.Log
 
-/**
- * Created by priyadhingra on 12/5/2017.
- */
 object Logger {
     private const val requiredLog = true
     fun d(tag: String, value: String) {

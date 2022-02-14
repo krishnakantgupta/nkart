@@ -1,0 +1,107 @@
+[
+  {
+    "productId": 1,
+    "title": "Oppo A53s",
+    "description": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
+    "quantity": 5,
+    "imageId": 1,
+    "price": 15000,
+    "discount": 20,
+    "selectedProductSize": {
+      "sizeId": 1,
+      "sizeValue": "38",
+      "sizeName": "Small"
+    },
+    "selectedProductColour": {
+      "colourId": 1,
+      "colourName": "Blue",
+      "colourCode": "#0000FF"
+    },
+    "productSize": null,
+    "productColour": null
+  },
+  {
+    "productId": 2,
+    "title": "Samsung Galaxy A22",
+    "description": "Samsung Galaxy A22 128 GB, 6 GB, Black, Smarphone",
+    "quantity": 5,
+    "imageId": 1,
+    "price": 15000,
+    "discount": 20,
+    "selectedProductSize": {
+      "sizeId": 1,
+      "sizeValue": "38",
+      "sizeName": "Small"
+    },
+    "selectedProductColour": {
+      "colourId": 1,
+      "colourName": "Blue",
+      "colourCode": "#0000FF"
+    },
+    "productSize": null,
+    "productColour": null
+  },
+  {
+    "productId": 3,
+    "title": "Vivo V21",
+    "description": "Vivo V21 5G 128 GB, 8 GB RAM, Dusk Blue, Smartphone",
+    "quantity": 5,
+    "imageId": 1,
+    "price": 15000,
+    "discount": 20,
+    "selectedProductSize": {
+      "sizeId": 2,
+      "sizeValue": "40",
+      "sizeName": "Medium"
+    },
+    "selectedProductColour": {
+      "colourId": 2,
+      "colourName": "Green",
+      "colourCode": "#008000"
+    },
+    "productSize": null,
+    "productColour": null
+  },
+  {
+    "productId": 4,
+    "title": "Apple iPhone 13 Mini",
+    "description": "Apple iPhone 13 Mini 128 GB, Midnight (Black)",
+    "quantity": 5,
+    "imageId": 1,
+    "price": 20000,
+    "discount": 20,
+    "selectedProductSize": {
+      "sizeId": 3,
+      "sizeValue": "42",
+      "sizeName": "Large"
+    },
+    "selectedProductColour": {
+      "colourId": 3,
+      "colourName": "Yellow",
+      "colourCode": "#FFFF00"
+    },
+    "productSize": null,
+    "productColour": null
+  },
+  {
+    "productId": 5,
+    "title": "Samsung Galaxy S10",
+    "description": "Samsung Galaxy S10 Smart Phone 512 GB, 8 GB RAM, Prism White",
+    "quantity": 5,
+    "imageId": 1,
+    "price": 10000,
+    "discount": 20,
+    "selectedProductSize": {
+      "sizeId": 1,
+      "sizeValue": "38",
+      "sizeName": "Small"
+    },
+    "selectedProductColour": {
+      "colourId": 1,
+      "colourName": "Blue",
+      "colourCode": "#0000FF"
+    },
+    "productSize": null,
+    "productColour": null
+  }
+]

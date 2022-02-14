@@ -3,6 +3,7 @@ package com.kk.nkart.data.models
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
+
 @Parcelize
 data class AddressModel(var addressId: Int = -1,
                         var userId: Int = -1,
@@ -10,7 +11,11 @@ data class AddressModel(var addressId: Int = -1,
                         var city: String = "",
                         var country: String = "",
                         var pinCode: String = "",
+                        var name: String = "",
+                        var mobile: String ="",
+                        var deleted : Boolean = false,
                         var default: Boolean = false,
+                        var isSelected:Boolean = false,
                         var state: String = "") : Parcelable {
     fun getFullAddress(): String {
         var fulladdress = StringBuilder()
@@ -25,6 +30,7 @@ data class AddressModel(var addressId: Int = -1,
             fulladdress.append("\n$country")
         return fulladdress.toString()
     }
+
     fun getAddressForView(): String {
         var fulladdress = StringBuilder()
         fulladdress.append(address)

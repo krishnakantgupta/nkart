@@ -58,7 +58,7 @@ abstract class ProductItemAdapter(private val context: Context) :
             binding.tvProductName.text = productModel.title
             binding.tvProductPrice.text = String.format(context.getString(R.string.product_price), productModel.price)
             binding.tvProductDiscountPrice.text = String.format(context.getString(R.string.product_price), discount)
-            binding.tvDiscount.text = "-${productModel.discount}%"
+            binding.tvDiscount.text = "-${productModel.discount.toInt()}%"
             productModel.thumbnailUrl?.let { ImageUtils.loadImage(binding.imgThumb.context, binding.imgThumb, it) }
             binding.tvProductDiscountPrice.paintFlags = (binding.tvProductDiscountPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG)
 

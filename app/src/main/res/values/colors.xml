@@ -25,6 +25,7 @@
     <color name="divider">#ACACAC</color>
     <color name="white">#FFFFFFFF</color>
     <color name="separator">#ACACAC</color>
+    <color name="green">#3CA135</color>
     <color name="red">#FFFF0000</color>
     <color name="red_medium_dark">#FFA80000</color>
     <color name="transparent">#00000000</color>

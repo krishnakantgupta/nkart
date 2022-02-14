@@ -15,6 +15,11 @@ class APIRepository(private val apiHelper: ApiHelper) {
         return apiHelper.doLogin(bodyData)
     }
 
+
+    fun doRegister(bodyData: String): Observable<UserModel> {
+        return apiHelper.doRegister(bodyData)
+    }
+
     fun getCategory(): Observable<List<CategoryModel>> {
         return apiHelper.getCategory()
     }
@@ -31,8 +36,31 @@ class APIRepository(private val apiHelper: ApiHelper) {
         return apiHelper.getProductDetails(productId)
     }
 
-    fun getDashboardData(userID: Int):Observable<DashboardModel>{
+    fun addToCart(productId: Int, userId: Int, sizeId: Int, colorId: Int, quantity: Int): Observable<Boolean> {
+        return apiHelper.addToCart(productId, userId, sizeId, colorId, quantity)
+    }
+
+    fun deleteFromCart(productId: Int, userId: Int): Observable<Boolean> {
+        return apiHelper.deleteFromCart(productId, userId)
+    }
+
+    fun addToWishlist(productId: Int, userId: Int): Observable<Boolean> {
+        return apiHelper.addToWishlist(productId, userId)
+    }
+    fun deleteFromWishlist(productId: Int, userId: Int): Observable<Boolean> {
+        return apiHelper.deleteFromWishlist(productId, userId)
+    }
+
+    fun getDashboardData(userID: Int): Observable<DashboardModel> {
         return apiHelper.getDashboardData(userID)
     }
 
+
+    fun getCartList(userID: Int): Observable<List<CartModel>> {
+        return apiHelper.getCartList(userID)
+    }
+
+    fun getWishList(userID: Int): Observable<List<WishListModel>> {
+        return apiHelper.getWishList(userID)
+    }
 }

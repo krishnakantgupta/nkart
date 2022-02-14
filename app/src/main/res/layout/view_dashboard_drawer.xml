@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_marginTop="@dimen/dimen_10dp"
-                        android:text="Name"
+                        android:text="@{viewModelInstance.userName}"
                         android:textColor="@color/black_4"
                         android:textSize="@dimen/dimen_20sp"
                         android:textStyle="bold" />
@@ -104,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_marginTop="@dimen/dimen_5dp"
-                        android:text="dummymyaddress@gmail.com"
+                        android:text="@{viewModelInstance.emailAddress}"
                         android:textColor="@color/black_7"
                         android:textSize="@dimen/dimen_16sp" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -145,6 +145,7 @@
                         android:id="@+id/menuAddress"
                         style="@style/navigation_item"
                         android:onClick="@{(view) -> viewModelInstance.addressClick(view)}"
+                        android:visibility="@{viewModelInstance.isLogin ? View.VISIBLE : View.GONE}"
                         app:icon="@drawable/ic_person"
                         app:title="@string/addresses" />
 
@@ -152,6 +153,7 @@
                         android:id="@+id/menuOrder"
                         style="@style/navigation_item"
                         android:onClick="@{(view) -> viewModelInstance.viewOrderClick(view)}"
+                        android:visibility="@{viewModelInstance.isLogin ? View.VISIBLE : View.GONE}"
                         app:icon="@drawable/ic_order_filled"
                         app:title="@string/view_order" />
 
@@ -159,6 +161,7 @@
                         android:id="@+id/menuWishlist"
                         style="@style/navigation_item"
                         android:onClick="@{(view) -> viewModelInstance.wishListClick(view)}"
+                        android:visibility="@{viewModelInstance.isLogin ? View.VISIBLE : View.GONE}"
                         app:icon="@drawable/ic_heart_filled"
                         app:title="@string/wishlist" />
 

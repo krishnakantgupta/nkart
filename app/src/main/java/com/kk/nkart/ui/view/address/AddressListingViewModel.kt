@@ -24,7 +24,7 @@ class AddressListingViewModel @Inject constructor(val application: BaseApplicati
     fun getAddress() {
         compositeDisposable.add(
             apiRepository
-                .getAddressList(AppMemory.userModel.id)
+                .getAddressList(AppMemory.userModel.userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ addressList ->

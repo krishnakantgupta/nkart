@@ -1,15 +1,19 @@
 package com.kk.nkart.data.models
 
-data class UserModel(var id: Int = -1,
-                     var createdAt: String? = null,
-                     var name: String? = null,
-                     var lastname: String? = null,
-                     var avatar: String? = null,
-                     var mobile: String? = null,
-                     var email: String? = null,
-                     var password: String? = null
+data class UserModel(
+    val userId: Int = -1,
+    val userName: String = "",
+    val salutation: String = "",
+    val firstName: String = "",
+    val lastName: String = "",
+    val email: String = "",
+    val createdDate: String = "",
+    val lastUpdated: String = "",
+    val mobile: String = "",
+    val passwordHash: String? = null,
+    val lastLogin: String? = null
 ) : BaseModel() {
     fun getFullName(): String {
-        return name + " " + lastname
+        return "$salutation $firstName $lastName"
     }
 }
