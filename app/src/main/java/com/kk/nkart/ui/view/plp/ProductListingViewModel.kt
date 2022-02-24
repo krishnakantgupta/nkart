@@ -10,6 +10,7 @@ import com.kk.nkart.base.core.BaseViewModel
 import com.kk.nkart.base.core.Event
 import com.kk.nkart.data.api.APIRepository
 import com.kk.nkart.data.models.ProductDetailsModel
+import com.kk.nkart.data.models.ProductModel
 import com.kk.nkart.utils.Logger
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -19,6 +20,7 @@ import javax.inject.Inject
 class ProductListingViewModel @Inject constructor(val appPreferences: AppPreferences, val application: BaseApplication, private val apiRepository: APIRepository) : BaseViewModel(application) {
 
     val productDetailsResponse = MutableLiveData<Event<ProductDetailsModel?>>()
+    val productListReponse = MutableLiveData<Event<List<ProductModel>?>>()
     val isLogin = MutableLiveData<Boolean>().apply { this.value = appPreferences.isUserLogin() }
 
 
@@ -40,6 +42,27 @@ class ProductListingViewModel @Inject constructor(val appPreferences: AppPrefere
                     productDetailsResponse.postValue(Event(null))
                 })
         )
+    }
+
+    fun fetchProductList(subCategoryId: Int) {
+        Logger.v("--KK-- fetchProductList", "Start")
+        progressEvent.postValue(Event(true))
+        compositeDisposable.add(
+            apiRepository
+                .getProductListForSubCategory(subCategoryId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ productList ->
+                    Logger.v("--KK-- fetchProductList", "Done " + productList)
+                    productListReponse.postValue(Event(productList))
+                    progressEvent.postValue(Event(false))
+                }, { throwable ->
+                    Logger.e("--KK-- fetchProductList", "Error" + throwable.message)
+                    progressEvent.postValue(Event(false))
+                    productListReponse.postValue(Event(null))
+                })
+        )
+
     }
 
 

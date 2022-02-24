@@ -22,6 +22,7 @@ class ProductDetailsViewModel @Inject constructor(val appPreferences: AppPrefere
 
     val productDetailsResponse = MutableLiveData<Event<ProductDetailsModel?>>()
     val addToCardResponse = MutableLiveData<Event<Boolean?>>()
+    val wishListUpdate = MutableLiveData<Event<Boolean>>()
     val isLogin = MutableLiveData<Boolean>().apply { this.value = appPreferences.isUserLogin() }
 
     var selectedSize = -1
@@ -45,6 +46,53 @@ class ProductDetailsViewModel @Inject constructor(val appPreferences: AppPrefere
                     Logger.e("--KK-- getProductDetails", "Error" + throwable.message)
                     progressEvent.postValue(Event(false))
                     productDetailsResponse.postValue(Event(null))
+                })
+        )
+    }
+
+    fun wishlist(v: View) {
+        var productId = v.tag  as Int
+        progressEvent.postValue(Event(true))
+        if(AppMemory.wishListIds.contains(productId)){
+            removeFromWishList(productId)
+        }else{
+            addToWishList(productId)
+        }
+
+    }
+
+    private fun removeFromWishList(productId :Int ){
+        compositeDisposable.add(
+            apiRepository
+                .addToWishlist(productId, AppMemory.userModel.userId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ sucess ->
+                    Logger.v("--KK-- wishlist", "Done" + sucess)
+                    AppMemory.wishListIds.remove(productId)
+                    wishListUpdate.postValue(Event(false))
+                    progressEvent.postValue(Event(false))
+                }, { throwable ->
+                    Logger.e("--KK-- wishlist", "Error" + throwable.message)
+                    progressEvent.postValue(Event(false))
+                })
+        )
+    }
+
+    private fun addToWishList(productId :Int ){
+        compositeDisposable.add(
+            apiRepository
+                .addToWishlist(productId, AppMemory.userModel.userId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ sucess ->
+                    Logger.v("--KK-- wishlist", "Done" + sucess)
+                    AppMemory.wishListIds.add(productId)
+                    wishListUpdate.postValue(Event(true))
+                    progressEvent.postValue(Event(false))
+                }, { throwable ->
+                    Logger.e("--KK-- wishlist", "Error" + throwable.message)
+                    progressEvent.postValue(Event(false))
                 })
         )
     }

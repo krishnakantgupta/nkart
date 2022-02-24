@@ -13,6 +13,7 @@
     <string name="search_item">Search product by name, category</string>
     <string name="category">Categories</string>
     <string name="viewAll">View All</string>
+    <string name="total_amount">Total Amount : ₹ %1$s</string>
     <string name="product_price">₹ %1$s</string>
     <string name="product_price_strike">₹ <del>%1$s</del></string>
     <string name="trendingItem">Trending Items</string>
@@ -69,9 +70,11 @@
     <string name="error_password_not_match">Password and Confirma password not match</string>
     <string name="error_password_length">Password must be greater than 6 character</string>
     <string name="something_went_wrong">Something went wrong. Please try again.</string>
-    <string name="invalid_email_or_password">Invalid email or password.</string>
+    <string name="invalid_email_or_password">Invalid email or password.\nPlease try again.</string>
     <string name="empty_cart">Your shopping bag is empty.</string>
     <string name="empty_wishlist">Your Wishlist is empty.</string>
     <string name="click_on_continue_shopping">Click on continue shopping and add item into cart</string>
+    <string name="discount_label">Discount</string>
+    <string name="total_label">Final Amount</string>
 
 </resources>

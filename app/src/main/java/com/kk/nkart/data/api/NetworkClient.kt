@@ -1,6 +1,7 @@
 package com.kk.jet2articalassignment.data.api
 
 import android.util.Log
+import com.kk.nkart.data.api.SimpleLoggingInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -13,7 +14,7 @@ object NetworkClient {
     private var client: NetworkApiService? = null
 
     fun getClient(): NetworkApiService? {
-        if (client != null) {
+        if (client == null) {
             client = createClient()
         }
         return client
@@ -27,13 +28,14 @@ object NetworkClient {
         val NETWORK_TIMEOUT: Long = 60
         val READ_TIMEOUT: Long = 10
         try {
-            val interceptor = HttpLoggingInterceptor()
-            interceptor.level = HttpLoggingInterceptor.Level.BODY
+
+            val interceptor = SimpleLoggingInterceptor()
+//            interceptor.level = HttpLoggingInterceptor.Level.BASIC
 
             val client = OkHttpClient.Builder()
                 .connectTimeout(NETWORK_TIMEOUT, TimeUnit.SECONDS)
                 .readTimeout(READ_TIMEOUT, TimeUnit.MINUTES)
-                .addInterceptor(interceptor)
+                .addInterceptor(getLogging())
                 .build()
 
             val retrofit = Retrofit.Builder()
@@ -48,5 +50,11 @@ object NetworkClient {
             Log.e("NetworkClient", e.message + "")
         }
         return null
+    }
+
+    private fun getLogging(): HttpLoggingInterceptor {
+        val logging = HttpLoggingInterceptor()
+        logging.setLevel(HttpLoggingInterceptor.Level.BASIC)
+        return logging
     }
 }

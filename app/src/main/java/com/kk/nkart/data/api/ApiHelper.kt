@@ -1,18 +1,21 @@
 package com.kk.jet2articalassignment.data.api
 
+import com.kk.nkart.data.requestModels.LoginRequestModel
 import javax.inject.Inject
 
 class ApiHelper @Inject constructor(private val apiService: ApiService) {
 
     fun getArticles() = apiService.getArticles()
 
-    fun doLogin(bodyData: String) = apiService.doLogin(bodyData)
+    fun doLogin(bodyData: LoginRequestModel) = apiService.doLogin(bodyData)
 
     fun doRegister(bodyData: String) = apiService.doRegister(bodyData)
 
     fun getCategory() = apiService.getCategory()
 
     fun getProductList(pageNumber: Int) = apiService.getProductList(pageNumber)
+
+    fun getProductListForSubCategory(subCategoryId: Int) = apiService.getProductListForSubCategory(subCategoryId)
 
     fun getAddressList(userID: Int) = apiService.getAddressList(userID)
 

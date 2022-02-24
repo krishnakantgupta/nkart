@@ -72,6 +72,12 @@ class ProductListActivity : BaseActivity() {
             }
         })
 
+        viewModel.productListReponse.observe(this, Observer { event ->
+            var productList = event.getContentIfNotHandled()
+            if (productList != null) {
+                adapter.setData(productList)
+            }
+        })
     }
 
     private fun init() {
@@ -92,7 +98,7 @@ class ProductListActivity : BaseActivity() {
             var categoryId = intent.extras?.getInt(Constants.BUNDLE_KEY_CATEGORY_ID) ?: 1
             name = intent.extras?.getString(Constants.BUNDLE_KEY_SUB_CATEGORY_NAME)
                 ?: "Product Listing"
-
+            viewModel.fetchProductList(subCategoryId)
         } else {
             var productList = intent.extras?.get(Constants.BUNDLE_KEY_PRODUCT_LIST) as List<ProductModel>
                 ?: listOf()

@@ -60,17 +60,16 @@ class LoginActivity : BaseActivity() {
             }
         })
         loginViewModel.loginResponse.observe(this, Observer { event ->
-            event?.getContentIfNotHandled()?.let {
-                if (it != null) {
-                    var response = it
-                    AppMemory.userModel = it
+            var response = event?.getContentIfNotHandled()
+                if (response != null) {
+                    var response = response
+                    AppMemory.userModel = response
                     appPreferences.setUserLogin(true)
                     setResult(RESULT_OK)
                     finish()
                 } else {
                     showToast(getString(R.string.invalid_email_or_password))
                 }
-            }
         })
         loginViewModel.progressEvent.observe(this, Observer { event ->
             event?.getContentIfNotHandled()?.let {

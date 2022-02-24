@@ -5,41 +5,80 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.kk.nkart.R
 import com.kk.nkart.base.AppMemory
 import com.kk.nkart.data.models.CartModel
 import com.kk.nkart.databinding.ViewCartItemBinding
+import com.kk.nkart.databinding.ViewCartTotalBinding
 import com.kk.nkart.ui.common.IRecyclerItemClickListener
 
 
-class CartItemAdapter(private val context: Context, private val itemDeleteListener: IRecyclerItemClickListener,private val itemSaveListener: IRecyclerItemClickListener) : RecyclerView.Adapter<CartItemAdapter.CartViewHolder>() {
+class CartItemAdapter(private val context: Context, private val itemDeleteListener: IRecyclerItemClickListener, private val itemSaveListener: IRecyclerItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var cartList: List<CartModel>? = null
+    var totalPrice = 0.0
+    var discountPrice = 0.0
+    val ITEM: Int = 0
+    val FOOTER: Int = 1
+    var size = 0
 
-    fun setData(cartList: List<CartModel>?) {
+    fun setData(cartList: List<CartModel>?, totalPrice: Double, discountPrice: Double) {
         this.cartList = cartList
+        this.totalPrice = totalPrice
+        this.discountPrice = discountPrice
+        size = cartList?.size ?: 0
         notifyDataSetChanged()
     }
 
-    fun removeItem(index:Int){
+    fun removeItem(index: Int) {
         (this.cartList as ArrayList).removeAt(index)
+        size = cartList?.size ?: 0
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         var layoutInflater = LayoutInflater.from(parent.context)
-        var binding = ViewCartItemBinding.inflate(layoutInflater, parent, false)
-        return CartViewHolder(binding)
+        if (viewType == FOOTER) {
+            var binding = ViewCartTotalBinding.inflate(layoutInflater, parent, false)
+            return CartTotalViewHolder(binding)
+        } else {
+            var binding = ViewCartItemBinding.inflate(layoutInflater, parent, false)
+            return CartViewHolder(binding)
+        }
     }
 
-    override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
-        val cartModel = cartList?.get(position)
-        holder.bind(cartModel!!, position)
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        if (holder is CartViewHolder) {
+            val cartModel = cartList?.get(position)
+            holder.bind(cartModel!!, position)
+        } else if (holder is CartTotalViewHolder) {
+            holder.bind()
+        }
     }
 
     override fun getItemCount(): Int {
-        return cartList?.size ?: 0
+        if (size > 0) {
+            return size + 1
+        } else {
+            return 0
+        }
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return if (position == size)
+            FOOTER
+        else
+            ITEM
+    }
+
+    inner class CartTotalViewHolder(viewBinding: ViewCartTotalBinding) : RecyclerView.ViewHolder(viewBinding.root) {
+        private val binding = viewBinding
+        fun bind() {
+            binding.productPrice.text = String.format(context.getString(R.string.product_price), totalPrice)
+            binding.totalDiscountValue.text = String.format(context.getString(R.string.product_price), discountPrice)
+            binding.totalCartPriceValue.text = String.format(context.getString(R.string.product_price), totalPrice)
+        }
+    }
 
     inner class CartViewHolder(viewBinding: ViewCartItemBinding) : RecyclerView.ViewHolder(viewBinding.root) {
         private val binding = viewBinding
@@ -59,7 +98,7 @@ class CartItemAdapter(private val context: Context, private val itemDeleteListen
             binding.btnDelete.tag = position
             binding.btnDelete.setOnClickListener { v ->
                 var index = v.tag as Int
-                itemDeleteListener.onItemClick(cartList!![index],index)
+                itemDeleteListener.onItemClick(cartList!![index], index)
             }
             if (AppMemory.wishListIds.contains(cartModel.productId)) {
                 binding.btnHeart.visibility = View.VISIBLE
@@ -73,7 +112,7 @@ class CartItemAdapter(private val context: Context, private val itemDeleteListen
                 cartList?.get(index)?.let {
                     AppMemory.wishListIds.add(it.productId)
                 }
-                itemSaveListener.onItemClick(cartList!![index],index)
+                itemSaveListener.onItemClick(cartList!![index], index)
             }
         }
     }

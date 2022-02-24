@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
-import com.kk.jet2articalassignment.data.api.APIConstants
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
 import com.kk.nkart.base.AppMemory
@@ -60,12 +59,14 @@ class SplashActivity : BaseActivity() {
         setContentView(view)
         setUpViewModel()
         setUpObserver()
+//        APIConstants.BASE_URL = "http://4567-122-161-95-147.ngrok.io"
         remoteConfig = Firebase.remoteConfig
         remoteConfig.fetch().addOnCompleteListener(this, object : OnCompleteListener<Void> {
             override fun onComplete(task: Task<Void>) {
                 if (task.isSuccessful) {
                     remoteConfig.activate()
-                    APIConstants.BASE_URL = remoteConfig.getString("ngrok_url")
+//                    APIConstants.BASE_URL = remoteConfig.getString("ngrok_url")
+//                    APIConstants.BASE_URL = "http://4567-122-161-95-147.ngrok.io"
                     appPreferences.getUserCredential()?.let {
                         splashViewModel.doLogin(it)
                     } ?: init(Constants.SPLASH_TIMEOUT)
@@ -76,16 +77,14 @@ class SplashActivity : BaseActivity() {
 
     private fun setUpObserver() {
         splashViewModel.loginResponse.observe(this, Observer { event ->
-            event?.getContentIfNotHandled()?.let {
-                if (it != null) {
-                    var response = it
-                    AppMemory.userModel = it
-                    appPreferences.setUserLogin(true)
-                } else {
-                    appPreferences.logout()
-                }
-                init(500L)
+            var response = event.getContentIfNotHandled()
+            if (response != null) {
+                AppMemory.userModel = response
+                appPreferences.setUserLogin(true)
+            } else {
+                appPreferences.logout()
             }
+            init(500L)
         })
     }
 

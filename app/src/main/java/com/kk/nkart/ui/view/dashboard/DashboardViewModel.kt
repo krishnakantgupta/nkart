@@ -38,13 +38,16 @@ class DashboardViewModel @Inject constructor(val navigationRouter: NavigationRou
     var newCollection: List<ProductModel> = listOf()
 
     fun getCategory() {
+        Logger.v("--KK-- getCategory", "Start")
         compositeDisposable.add(
             apiRepository
                 .getCategory()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ categoryList ->
+                    AppMemory.categoryList = categoryList
                     categoryResponse.postValue(Event(categoryList))
+                    Logger.e("--KK-- getCategory", "Done" + categoryList)
                 }, { throwable ->
                     Logger.e("--KK-- getCategory", "Error" + throwable.message)
                 })
@@ -145,6 +148,7 @@ class DashboardViewModel @Inject constructor(val navigationRouter: NavigationRou
             userName.postValue(userName.value)
             emailAddress.postValue(emailAddress.value)
         }
+        getDashboardData()
     }
 
     fun crossButtonClick() {

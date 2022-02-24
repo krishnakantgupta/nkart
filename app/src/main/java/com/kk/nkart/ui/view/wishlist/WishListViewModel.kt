@@ -66,7 +66,7 @@ class WishListViewModel @Inject constructor(val appPreferences: AppPreferences, 
                     Logger.v("--KK-- addToCart", "Done" + success)
                     AppMemory.cartListIds.add(wishListModel.productId)
                     addToCardResponse.postValue(Event(position))
-                    progressEvent.postValue(Event(false))
+                    deleteFromWishList(wishListModel,position)
                 }, { throwable ->
                     Logger.e("--KK-- addToCart", "Error" + throwable.message)
                     progressEvent.postValue(Event(false))

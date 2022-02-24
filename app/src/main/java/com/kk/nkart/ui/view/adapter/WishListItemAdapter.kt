@@ -8,6 +8,7 @@ import com.kk.nkart.base.AppMemory
 import com.kk.nkart.data.models.WishListModel
 import com.kk.nkart.databinding.ViewWishlistItemBinding
 import com.kk.nkart.ui.common.IRecyclerItemClickListener
+import com.kk.nkart.utils.ImageUtils
 
 
 class WishListItemAdapter(private val context: Context, private val itemDeleteListener: IRecyclerItemClickListener, private val itemSaveListener: IRecyclerItemClickListener) : RecyclerView.Adapter<WishListItemAdapter.CartViewHolder>() {

@@ -90,16 +90,33 @@ class CartActivity : BaseActivity() {
             }
         })
         viewModel.cartListResponse.observe(this, Observer { event ->
-            event?.getContentIfNotHandled()?.let {
-                if (it != null && it.isNotEmpty()) {
-                    binding.emptyView.visibility = View.GONE
-                    binding.recyclerView.visibility = View.VISIBLE
-                    cartListAdapter.setData(it)
-                } else {
-                    binding.btnCheckout.visibility = View.GONE
-                    binding.recyclerView.visibility = View.GONE
-                    binding.emptyView.visibility = View.VISIBLE
+            var response = event?.getContentIfNotHandled()
+            if (response != null && response.isNotEmpty()) {
+                binding.btnCheckout.visibility = View.VISIBLE
+                binding.btnContinue.visibility = View.VISIBLE
+                binding.emptyView.visibility = View.GONE
+                binding.recyclerView.visibility = View.VISIBLE
+                binding.headerTotalAmount.visibility = View.VISIBLE
+                var totalPrice: Double = 0.0
+                var discount: Double = 0.0
+                response.forEach { model ->
+                    run {
+                        var discountPrice = (model.price / 100) * model.discount
+                        totalPrice += (model.price - discountPrice)
+                        discount += discountPrice
+                    }
                 }
+                cartListAdapter.setData(response, totalPrice, discount)
+                binding.headerTotalAmount.text = String.format(getString(R.string.total_amount), totalPrice)
+                binding.totalItem.text = if (response.size > 1)
+                    "${response.size} Items"
+                else
+                    "${response.size} Item"
+            } else {
+                binding.btnCheckout.visibility = View.GONE
+                binding.btnContinue.visibility = View.VISIBLE
+                binding.recyclerView.visibility = View.GONE
+                binding.emptyView.visibility = View.VISIBLE
             }
         })
     }
@@ -127,15 +144,10 @@ class CartActivity : BaseActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         cartListAdapter = CartItemAdapter(this@CartActivity, object : IRecyclerItemClickListener {
             override fun onItemClick(data: Any?, position: Int) {
-//                cartListAdapter.removeItem(position)
-//                var list = (cartListAdapter.cartList as ArrayList)
-//                list.removeAt(position)
-//                cartListAdapter.setData(list)
                 viewModel.deleteFromCart(data as CartModel, position)
             }
         }, object : IRecyclerItemClickListener {
             override fun onItemClick(data: Any?, position: Int) {
-//                cartListAdapter.saveItemInWishList(position)
                 viewModel.moveToWishList(data as CartModel, position)
             }
         })

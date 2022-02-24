@@ -130,18 +130,10 @@ class WishListActivity : BaseActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         cartListAdapter = WishListItemAdapter(this@WishListActivity, object : IRecyclerItemClickListener {
             override fun onItemClick(data: Any?, position: Int) {
-                cartListAdapter.removeItem(position)
-//                var list = (cartListAdapter.cartList as ArrayList)
-//                list.removeAt(position)
-//                cartListAdapter.setData(list)
                 viewModel.deleteFromWishList(data as WishListModel, position)
             }
         }, object : IRecyclerItemClickListener {
             override fun onItemClick(data: Any?, position: Int) {
-//                cartListAdapter.removeItem(position)
-//                var list = (cartListAdapter.cartList as ArrayList)
-//                list.removeAt(position)
-//                cartListAdapter.setData(list)
                 viewModel.addToCart(data as WishListModel, position)
             }
         })

@@ -61,7 +61,7 @@ class CartViewModel @Inject constructor(val navigationRouter: NavigationRouter, 
         progressEvent.postValue(Event(true))
         compositeDisposable.add(
             apiRepository
-                .addToCart(productId, AppMemory.userModel.userId, selectedSize, selectColor, 1)
+                .deleteFromCart(productId, AppMemory.userModel.userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ cartmodel ->
@@ -89,8 +89,9 @@ class CartViewModel @Inject constructor(val navigationRouter: NavigationRouter, 
                     Logger.v("--KK-- deleteFromCart", "Done" + sucess)
                     AppMemory.cartListIds.remove(model.productId)
                     AppMemory.wishListIds.add(model.productId)
-                    modeToWishList.postValue(Event(position))
-                    progressEvent.postValue(Event(false))
+                    deleteFromCart(model, position)
+//                    modeToWishList.postValue(Event(position))
+//                    progressEvent.postValue(Event(false))
                 }, { throwable ->
                     Logger.e("--KK-- deleteFromCart", "Error" + throwable.message)
                     progressEvent.postValue(Event(false))

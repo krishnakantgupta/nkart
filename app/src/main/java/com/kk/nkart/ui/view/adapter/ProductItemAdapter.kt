@@ -97,9 +97,6 @@ abstract class ProductItemAdapter(private val context: Context) :
             this.onItemClick(productList[index], index)
         }
         holder.bind(position)
-//        holder.tvDiscount.paintFlags = (holder.tvDiscount.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG)
     }
 }
 
-
-//tvProductDiscountPrice.setPaintFlags(tvProductDiscountPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG)

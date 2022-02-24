@@ -86,6 +86,11 @@ class ProductDetailsActivity : BaseActivity() {
                 }
             }
         })
+        viewModel.wishListUpdate.observe(this, Observer { event ->
+            event?.getContentIfNotHandled()?.let {
+                updateWishListIcon(it)
+            }
+        })
         viewModel.productDetailsResponse.observe(this, Observer { event ->
             event?.getContentIfNotHandled()?.let {
                 productDetailsModel = it
@@ -122,10 +127,12 @@ class ProductDetailsActivity : BaseActivity() {
     }
 
     private fun bindData() {
+        updateWishListIcon(AppMemory.wishListIds.contains(product?.productId))
         productDetailsModel.thumbnailUrl?.let { ImageUtils.loadImage(binding.imgProduct.context, binding.imgProduct, it) }
         val discount = (productDetailsModel.price / 100) * productDetailsModel.discount
         binding.tvDiscount.text = "${productDetailsModel.discount.toInt()}% OFF"
         binding.btnAddToCart.tag = productDetailsModel.productId
+        binding.imgWishlist.tag = productDetailsModel.productId
         binding.tvPrice.text = String.format(getString(R.string.product_price), productDetailsModel.price - discount)
         binding.tvTitle.text = productDetailsModel.title
         binding.tvSavePrice.text = "Save Rs. $discount"
@@ -134,6 +141,14 @@ class ProductDetailsActivity : BaseActivity() {
         binding.tvDescription.text = productDetailsModel.description
         bindSize()
         bindColor()
+    }
+
+    private fun updateWishListIcon(isInWishList:Boolean){
+        if (isInWishList) {
+            binding.imgWishlist.setImageResource(R.drawable.ic_heart_filled)
+        }else{
+            binding.imgWishlist.setImageResource(R.drawable.ic_heart_outline)
+        }
     }
 
     private fun bindSize() {
@@ -156,6 +171,7 @@ class ProductDetailsActivity : BaseActivity() {
                 }
                 flexboxLayout.addView(sizeView)
             }
+            flexboxLayout[0].performClick()
             flexboxLayout[0].setBackgroundResource(R.drawable.bg_rect_theme)
             (flexboxLayout[0] as TextView).setTextColor(resources.getColor(R.color.colorPrimary))
         }
@@ -202,6 +218,7 @@ class ProductDetailsActivity : BaseActivity() {
                 }
                 flexboxLayout.addView(colorView)
             }
+            flexboxLayout[0].performClick()
             ((flexboxLayout[0] as CardView)[0] as ImageView).visibility = View.VISIBLE
         }
     }
@@ -243,7 +260,8 @@ class ProductDetailsActivity : BaseActivity() {
             else -> return super.onOptionsItemSelected(item)
         }
     }
-    private fun cartMenuClicked(){
+
+    private fun cartMenuClicked() {
         if (AppMemory.userModel.userId != -1) {
             navigationRouter.navigateTo(NavigationTarget.to(NavigationTarget.CART_SCREEN))
         } else {

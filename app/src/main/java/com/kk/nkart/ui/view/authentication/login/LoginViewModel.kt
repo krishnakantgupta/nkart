@@ -34,13 +34,17 @@ class LoginViewModel @Inject constructor(val appPreferences: AppPreferences, val
         Logger.v("--KK-- Login", "Start")
         compositeDisposable.add(
             apiRepository
-                .doLogin(loginRequestModel.getJSON())
+                .doLogin(loginRequestModel)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ userList ->
-                    appPreferences.saveuserCredential(loginRequestModel.getJSON())
-                    Logger.v("--KK-- Login", "Done" + userList)
-                    loginResponse.postValue(Event(userList))
+                    if(userList.email!=null) {
+                        appPreferences.saveuserCredential(loginRequestModel.getJSON())
+                        Logger.v("--KK-- Login", "Done" + userList)
+                        loginResponse.postValue(Event(userList))
+                    }else{
+                        loginResponse.postValue(Event(null))
+                    }
                 }, { throwable ->
                     Logger.e("--KK-- Login", "Error" + throwable.message)
                     loginResponse.postValue(Event(null))

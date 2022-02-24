@@ -3,6 +3,7 @@ package com.kk.nkart.data.api
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.jet2articalassignment.data.models.ArticleInfo
 import com.kk.nkart.data.models.*
+import com.kk.nkart.data.requestModels.LoginRequestModel
 import io.reactivex.Observable
 
 class APIRepository(private val apiHelper: ApiHelper) {
@@ -11,7 +12,7 @@ class APIRepository(private val apiHelper: ApiHelper) {
         return apiHelper.getArticles()
     }
 
-    fun doLogin(bodyData: String): Observable<UserModel> {
+    fun doLogin(bodyData: LoginRequestModel): Observable<UserModel> {
         return apiHelper.doLogin(bodyData)
     }
 
@@ -26,6 +27,10 @@ class APIRepository(private val apiHelper: ApiHelper) {
 
     fun getProductList(pageNumber: Int): Observable<List<ProductModel>> {
         return apiHelper.getProductList(pageNumber)
+    }
+
+    fun getProductListForSubCategory(subCategoryId: Int): Observable<List<ProductModel>> {
+        return apiHelper.getProductListForSubCategory(subCategoryId)
     }
 
     fun getAddressList(userID: Int): Observable<List<AddressModel>> {

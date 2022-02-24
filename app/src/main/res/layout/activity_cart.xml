@@ -35,6 +35,36 @@
                 app:layout_scrollFlags="enterAlways|scroll" />
         </com.google.android.material.appbar.AppBarLayout>
 
+        <FrameLayout
+            android:id="@+id/total_item_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_4dp">
+
+            <TextView
+                android:id="@+id/total_item"
+                style="@style/text_h6"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:text=""
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/header_total_amount"
+                style="@style/text_h6"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:text="@string/total_amount"
+                android:textColor="@color/white" />
+
+        </FrameLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
@@ -47,8 +77,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:visibility="gone"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <ImageView
                 android:layout_width="@dimen/dimen_100dp"
@@ -84,9 +114,10 @@
                 android:layout_height="@dimen/dimen_48dp"
                 android:layout_marginEnd="@dimen/dimen_1dp"
                 android:layout_weight="1"
-                android:onClick="@{ () -> viewModel.navigateToDashboard() }"
+                android:visibility="gone"
                 android:background="@color/green"
                 android:enabled="true"
+                android:onClick="@{ () -> viewModel.navigateToDashboard() }"
                 android:text="@string/continue_shopping" />
 
 
@@ -97,9 +128,9 @@
                 android:layout_height="@dimen/dimen_48dp"
                 android:layout_marginStart="@dimen/dimen_1dp"
                 android:layout_weight="1"
+                android:visibility="gone"
                 android:background="@color/colorPrimary"
                 android:text="@string/checkout" />
-
 
         </LinearLayout>
     </LinearLayout>
