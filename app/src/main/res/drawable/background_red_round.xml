@@ -7,8 +7,8 @@
         android:topLeftRadius="@dimen/dimen_16dp"
         android:topRightRadius="@dimen/dimen_16dp" />
     <padding
-        android:bottom="@dimen/dimen_4dp"
+        android:bottom="@dimen/dimen_2dp"
         android:left="@dimen/dimen_8dp"
         android:right="@dimen/dimen_8dp"
-        android:top="@dimen/dimen_4dp" />
+        android:top="@dimen/dimen_2dp" />
 </shape>

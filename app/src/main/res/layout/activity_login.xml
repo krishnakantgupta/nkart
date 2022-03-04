@@ -97,6 +97,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/dimen_8dp"
                                 android:layout_marginBottom="@dimen/dimen_8dp"
+                                app:helperTextTextColor="@color/colorPrimary"
                                 app:hintTextColor="@color/colorPrimary">
 
                                 <androidx.appcompat.widget.AppCompatEditText
@@ -119,7 +120,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/dimen_8dp"
                                 android:layout_marginBottom="@dimen/dimen_8dp"
-                                app:hintTextColor="@color/colorPrimary">
+                                app:helperTextTextColor="@color/colorPrimary"
+                                app:hintTextColor="@color/black_7">
 
                                 <androidx.appcompat.widget.AppCompatEditText
                                     android:id="@+id/txtPassword"

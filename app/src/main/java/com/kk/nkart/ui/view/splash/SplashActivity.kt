@@ -5,14 +5,25 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.FrameLayout
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.afollestad.viewpagerdots.DotsIndicator
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
+import com.kk.nkart.base.AppMemory
 import com.kk.nkart.base.AppPreferences
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.BaseApplication
 import com.kk.nkart.base.Constants
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.dagger.CoreDI
+import com.kk.nkart.data.api.ApiServiceImpl
 import com.kk.nkart.databinding.ActivitySplashBinding
 import com.kk.nkart.navigation.NavigationRouter
 import com.kk.nkart.navigation.NavigationTarget
@@ -21,11 +32,16 @@ import javax.inject.Inject
 
 class SplashActivity : BaseActivity() {
 
+    private lateinit var remoteConfig: FirebaseRemoteConfig
+
     @Inject
-    lateinit var appPreferences : AppPreferences
+    lateinit var appPreferences: AppPreferences
 
     @Inject
     lateinit var navigationRouter: NavigationRouter
+
+    internal lateinit var splashViewModelFactory: SplashViewModel.Factory
+    private lateinit var splashViewModel: SplashViewModel
 
     private lateinit var binding: ActivitySplashBinding
     private lateinit var viewPager: ViewPager
@@ -41,12 +57,38 @@ class SplashActivity : BaseActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-//        val binding: ActivitySplashBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
-//        val authViewModel = AuthViewModel() //ViewModelProviders.of(this).get(AuthViewModel.class);
-//
-//        binding.setViewModel(authViewModel)
-//        binding.executePendingBindings()
-//        authViewModel.setActivity(this)
+        setUpViewModel()
+        setUpObserver()
+//        APIConstants.BASE_URL = "http://4567-122-161-95-147.ngrok.io"
+        remoteConfig = Firebase.remoteConfig
+        remoteConfig.fetch().addOnCompleteListener(this, object : OnCompleteListener<Void> {
+            override fun onComplete(task: Task<Void>) {
+                if (task.isSuccessful) {
+                    remoteConfig.activate()
+//                    APIConstants.BASE_URL = remoteConfig.getString("ngrok_url")
+//                    APIConstants.BASE_URL = "http://4567-122-161-95-147.ngrok.io"
+                    appPreferences.getUserCredential()?.let {
+                        splashViewModel.doLogin(it)
+                    } ?: init(Constants.SPLASH_TIMEOUT)
+                }
+            }
+        })
+    }
+
+    private fun setUpObserver() {
+        splashViewModel.loginResponse.observe(this, Observer { event ->
+            var response = event.getContentIfNotHandled()
+            if (response != null) {
+                AppMemory.userModel = response
+                appPreferences.setUserLogin(true)
+            } else {
+                appPreferences.logout()
+            }
+            init(500L)
+        })
+    }
+
+    private fun init(time: Long) {
         Handler().postDelayed({
             if (appPreferences.isFreshInstall()) {
                 binding.viewPager.visibility = View.VISIBLE
@@ -57,10 +99,15 @@ class SplashActivity : BaseActivity() {
                 binding.btnNext.setOnClickListener { showNextPage() }
                 binding.btnSkip.setOnClickListener { setAppAlreadyLaunch() }
                 binding.viewPager.addOnPageChangeListener(onPageChangeListener())
-            }else{
+            } else {
                 moveToDashboard()
             }
-        }, Constants.SPLASH_TIMEOUT)
+        }, time)
+    }
+
+    private fun setUpViewModel() {
+        splashViewModelFactory = SplashViewModel.Factory(appPreferences, this.application as BaseApplication, ApiHelper(ApiServiceImpl()))
+        splashViewModel = ViewModelProvider(this, splashViewModelFactory).get(SplashViewModel::class.java)
     }
 
     private fun onPageChangeListener(): OnPageChangeListener {
@@ -95,7 +142,8 @@ class SplashActivity : BaseActivity() {
             setAppAlreadyLaunch()
         }
     }
-    private fun setAppAlreadyLaunch(){
+
+    private fun setAppAlreadyLaunch() {
         appPreferences.setAppAlreadyInUse()
         moveToDashboard()
     }

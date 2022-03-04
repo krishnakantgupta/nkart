@@ -1,0 +1,13 @@
+{
+  "userId": 2,
+  "userName": "krishnakant",
+  "salutation": "Mr",
+  "firstName": "KrishnaKanth",
+  "lastName": "Gupta",
+  "email": "krishnakant@nagarro.com",
+  "mobile": "9926855305",
+  "createdDate": "2021-11-11",
+  "lastUpdated": "2021-11-11",
+  "lastLogin": null,
+  "passwordHash": null
+}

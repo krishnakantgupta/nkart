@@ -1,0 +1,67 @@
+[
+  {
+    "productId": 1,
+    "title": "Oppo A53s",
+    "shortDesc": "Oppo A53s 5G 128 GB, 8 GB RAM, Ink Black, Smart Phone",
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "quantity": 10,
+    "price": 25000,
+    "discount": 20,
+    "createdDate": "2021-11-11",
+    "lastUpdated": "2021-11-11",
+    "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/41kZhC-EkeL._SX300_SY300_QL70_FMwebp_.jpg"
+  },
+  {
+    "productId": 2,
+    "title": "Samsung Galaxy A22",
+    "shortDesc": "Samsung Galaxy A22 128 GB, 6 GB, Black, Smarphone",
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "quantity": 10,
+    "price": 25000,
+    "discount": 20,
+    "createdDate": "2021-11-11",
+    "lastUpdated": "2021-11-11",
+    "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/41gamtY4GLS._SX300_SY300_QL70_FMwebp_.jpg"
+  },
+  {
+    "productId": 3,
+    "title": "Vivo V21",
+    "shortDesc": "Vivo V21 5G 128 GB, 8 GB RAM, Dusk Blue, Smartphone",
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "quantity": 10,
+    "price": 25000,
+    "discount": 20,
+    "createdDate": "2021-11-11",
+    "lastUpdated": "2021-11-11",
+    "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/61gRGQe8jjL._AC_UY327_FMwebp_QL65_.jpg"
+  },
+  {
+    "productId": 4,
+    "title": "Apple iPhone 13 Mini",
+    "shortDesc": "Apple iPhone 13 Mini 128 GB, Midnight (Black)",
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "quantity": 10,
+    "price": 25000,
+    "discount": 20,
+    "createdDate": "2021-11-11",
+    "lastUpdated": "2021-11-11",
+    "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/31GEfQ0aszL._SY445_SX342_QL70_FMwebp_.jpg"
+  },
+  {
+    "productId": 5,
+    "title": "Samsung Galaxy S10",
+    "shortDesc": "Samsung Galaxy S10 Smart Phone 512 GB, 8 GB RAM, Prism White",
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "quantity": 10,
+    "price": 25000,
+    "discount": 20,
+    "createdDate": "2021-11-11",
+    "lastUpdated": "2021-11-11",
+    "thumbnailUrl": "https://images-eu.ssl-images-amazon.com/images/I/71b5BwTCcZL._AC_UY327_FMwebp_QL65_.jpg"
+  }
+]

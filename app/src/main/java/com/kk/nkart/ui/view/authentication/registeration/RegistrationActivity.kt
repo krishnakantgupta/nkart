@@ -6,14 +6,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.kk.jet2articalassignment.data.api.ApiHelper
 import com.kk.nkart.R
-import com.kk.nkart.base.BaseActivity
+import com.kk.nkart.base.AppPreferences
+import com.kk.nkart.base.core.BaseActivity
 import com.kk.nkart.base.BaseApplication
 import com.kk.nkart.dagger.CoreDI
 import com.kk.nkart.data.api.ApiServiceImpl
 import com.kk.nkart.databinding.ActivityRegistrationBinding
 import com.kk.nkart.navigation.NavigationRouter
 import com.kk.nkart.navigation.NavigationTarget
-import com.kk.nkart.ui.view.authentication.login.LoginViewModel
 import javax.inject.Inject
 
 class RegistrationActivity : BaseActivity() {
@@ -23,6 +23,9 @@ class RegistrationActivity : BaseActivity() {
 
     @Inject
     lateinit var navigationRouter: NavigationRouter
+
+    @Inject
+    lateinit var appPreferences: AppPreferences
 
     private lateinit var viewModel: RegistrationViewModel
     private lateinit var binding: ActivityRegistrationBinding
@@ -54,6 +57,14 @@ class RegistrationActivity : BaseActivity() {
                 } else {
 
                 }
+            }
+        })
+        viewModel.registerResponse.observe(this, Observer { event ->
+            event?.getContentIfNotHandled()?.let {
+                val response = it
+                appPreferences.setUserLogin(true)
+                navigationRouter.navigateTo(NavigationTarget.to(NavigationTarget.DASHBOARD_SCREEN)
+                    .withIntentFlagClearTopSingleTop(true))
             }
         })
     }

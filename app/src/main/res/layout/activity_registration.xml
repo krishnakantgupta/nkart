@@ -85,7 +85,9 @@
                                     android:hint="First name"
                                     android:inputType="textEmailAddress"
                                     android:maxLength="40"
+                                    android:onTextChanged="@{signUpViewModel.firstNameTextChanged}"
                                     android:singleLine="true"
+                                    android:text="@{signUpViewModel.firstNameText}"
                                     android:textSize="@dimen/dimen_14sp" />
                             </com.google.android.material.textfield.TextInputLayout>
                             <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +107,9 @@
                                     android:hint="Enter Full name"
                                     android:inputType="textEmailAddress"
                                     android:maxLength="40"
+                                    android:onTextChanged="@{signUpViewModel.lastNameTextChanged}"
                                     android:singleLine="true"
+                                    android:text="@{signUpViewModel.lastNameText}"
                                     android:textSize="@dimen/dimen_14sp" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
@@ -126,7 +130,9 @@
                                 android:hint="Enter email address"
                                 android:inputType="textEmailAddress"
                                 android:maxLength="50"
+                                android:onTextChanged="@{signUpViewModel.emailTextChanged}"
                                 android:singleLine="true"
+                                android:text="@{signUpViewModel.emailText}"
                                 android:textSize="@dimen/dimen_14sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -146,7 +152,9 @@
                                 android:hint="Enter 10 digit mobile number"
                                 android:inputType="phone"
                                 android:maxLength="10"
+                                android:onTextChanged="@{signUpViewModel.mobileTextChanged}"
                                 android:singleLine="true"
+                                android:text="@{signUpViewModel.mobileText}"
                                 android:textSize="@dimen/dimen_14sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -166,7 +174,9 @@
                                 android:hint="Password"
                                 android:inputType="textPassword"
                                 android:maxLength="30"
+                                android:onTextChanged="@{signUpViewModel.passwordTextChanged}"
                                 android:singleLine="true"
+                                android:text="@{signUpViewModel.passwordText}"
                                 android:textSize="@dimen/dimen_14sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -186,7 +196,9 @@
                                 android:hint="Confirm Password"
                                 android:inputType="textPassword"
                                 android:maxLength="30"
+                                android:onTextChanged="@{signUpViewModel.confirmPasswordTextChanged}"
                                 android:singleLine="true"
+                                android:text="@{signUpViewModel.confirmPasswordText}"
                                 android:textSize="@dimen/dimen_14sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -196,9 +208,7 @@
                             style="@style/roundPrimaryButton"
                             android:layout_width="match_parent"
                             android:layout_marginTop="@dimen/dimen_32dp"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:focusableInTouchMode="true"
+                            android:onClick="@{()-> signUpViewModel.registerClick()}"
                             android:text="@string/register" />
 
 

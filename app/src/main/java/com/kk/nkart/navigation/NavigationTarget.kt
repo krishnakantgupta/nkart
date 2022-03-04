@@ -20,6 +20,7 @@ class NavigationTarget private constructor(val target: String) {
         const val PLP_SCREEN = "plp_screen"
         const val PDP_SCREEN = "pdp_screen"
         const val CART_SCREEN = "cart_screen"
+        const val SEARCH_SCREEN = "search_screen"
         const val WISHLIST_SCREEN = "wishlist_screen"
         const val GALLERY_SCREEN = "gallery_screen"
         const val ORDER_VIEW_SCREEN = "order_view_screen"

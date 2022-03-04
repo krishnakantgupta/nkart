@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.kk.nkart.ui.view.address.AddressListingViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_48dp"
+            android:layout_height="@dimen/dimen_48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.goBack.invoke()}"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back_white"
+            app:tint="@color/black" />
+
+        <TextView
+            style="@style/text_h1_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:text="@string/shipping_to"
+            android:textColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8dp">
+
+            <Button
+                android:id="@+id/btnDefault"
+                style="@style/roundPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/dimen_4dp"
+                android:layout_weight="1"
+                android:enabled="true"
+                android:text="@string/set_default" />
+
+
+            <Button
+                android:id="@+id/btnAddNew"
+                style="@style/roundPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                android:layout_weight="1"
+                android:text="@string/add_new" />
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
